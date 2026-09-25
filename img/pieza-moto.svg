@@ -1,0 +1,18 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 500 500" role="img" aria-labelledby="t">
+  <title id="t">Piezas de moto y bicicleta</title>
+  <defs>
+    <linearGradient id="bg" x1="0" y1="0" x2="1" y2="1"><stop stop-color="#ecfdf5"/><stop offset="1" stop-color="#a7f3d0"/></linearGradient>
+    <linearGradient id="metal" x1="0" y1="0" x2="1" y2="1"><stop stop-color="#f8fafc"/><stop offset=".4" stop-color="#475569"/><stop offset=".7" stop-color="#cbd5e1"/><stop offset="1" stop-color="#1e293b"/></linearGradient>
+    <filter id="s"><feDropShadow dx="0" dy="14" stdDeviation="12" flood-color="#065f46" flood-opacity=".22"/></filter>
+  </defs>
+  <rect width="500" height="500" rx="48" fill="url(#bg)"/>
+  <circle cx="250" cy="250" r="175" fill="#fff" opacity=".6"/>
+  <ellipse cx="250" cy="381" rx="175" ry="28" fill="#047857" opacity=".14"/>
+  <g filter="url(#s)" fill="none" stroke="url(#metal)" stroke-linecap="round" stroke-linejoin="round">
+    <circle cx="144" cy="322" r="78" stroke-width="20"/>
+    <circle cx="365" cy="322" r="78" stroke-width="20"/>
+    <path d="M144 322 205 205l93 40 67 77M205 205l-37-51M298 245l-93-40M230 154h49M319 238l48-52" stroke-width="18"/>
+    <path d="M268 174h45l45 50" stroke-width="17"/>
+  </g>
+  <g fill="#22c55e"><circle cx="96" cy="132" r="8"/><circle cx="414" cy="150" r="6"/><circle cx="397" cy="395" r="9"/></g>
+</svg>

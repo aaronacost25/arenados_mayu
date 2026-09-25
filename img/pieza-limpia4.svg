@@ -1,0 +1,25 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 800 600" role="img" aria-labelledby="t">
+  <title id="t">Mueble de hierro restaurado</title>
+  <defs>
+    <linearGradient id="bg" x1="0" y1="0" x2="1" y2="1"><stop stop-color="#fef3c7"/><stop offset="1" stop-color="#fdba74"/></linearGradient>
+    <linearGradient id="wood" x1="0" y1="0" x2="0" y2="1"><stop stop-color="#d6a06b"/><stop offset="1" stop-color="#8b4f2d"/></linearGradient>
+    <linearGradient id="metal" x1="0" y1="0" x2="1" y2="1"><stop stop-color="#f8fafc"/><stop offset=".4" stop-color="#475569"/><stop offset=".72" stop-color="#cbd5e1"/><stop offset="1" stop-color="#1e293b"/></linearGradient>
+    <filter id="s"><feDropShadow dx="0" dy="24" stdDeviation="18" flood-color="#7c2d12" flood-opacity=".3"/></filter>
+  </defs>
+  <rect width="800" height="600" fill="url(#bg)"/>
+  <circle cx="605" cy="115" r="215" fill="#fff" opacity=".35"/>
+  <path d="M0 490h800v110H0z" fill="#9a3412" opacity=".14"/>
+  <ellipse cx="410" cy="505" rx="280" ry="41" fill="#7c2d12" opacity=".22"/>
+  <g filter="url(#s)">
+    <path d="M205 213h390v54H205z" fill="url(#wood)" stroke="#7c3f1d" stroke-width="7"/>
+    <g fill="none" stroke="url(#metal)" stroke-linecap="round" stroke-linejoin="round">
+      <path d="M270 267 242 489M530 267l28 222" stroke-width="27"/>
+      <path d="M292 284v119M508 284v119" stroke-width="21"/>
+      <path d="M273 403h254" stroke-width="24"/>
+      <path d="M302 403 286 489M498 403l16 86" stroke-width="21"/>
+    </g>
+    <path d="M225 215h120" stroke="#fff" stroke-width="8" stroke-linecap="round" opacity=".52"/>
+  </g>
+  <g fill="#f97316" opacity=".65"><circle cx="116" cy="130" r="8"/><circle cx="700" cy="205" r="6"/><circle cx="112" cy="400" r="5"/></g>
+  <g transform="translate(635 40)"><rect width="130" height="45" rx="22" fill="#22c55e"/><text x="65" y="30" text-anchor="middle" font-family="Arial, sans-serif" font-size="18" font-weight="700" fill="#fff">LISTO</text></g>
+</svg>

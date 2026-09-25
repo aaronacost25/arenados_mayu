@@ -1,0 +1,23 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 800 600" role="img" aria-labelledby="t">
+  <title id="t">Llanta restaurada después del arenado</title>
+  <defs>
+    <linearGradient id="bg" x1="0" y1="0" x2="1" y2="1"><stop stop-color="#d6d3d1"/><stop offset="1" stop-color="#a8a29e"/></linearGradient>
+    <linearGradient id="metal"><stop stop-color="#f8fafc"/><stop offset=".42" stop-color="#64748b"/><stop offset=".72" stop-color="#e2e8f0"/><stop offset="1" stop-color="#1e293b"/></linearGradient>
+    <filter id="s"><feDropShadow dx="0" dy="22" stdDeviation="19" flood-color="#111827" flood-opacity=".42"/></filter>
+  </defs>
+  <rect width="800" height="600" fill="url(#bg)"/>
+  <path d="M0 520h800v80H0z" fill="#78716c"/>
+  <circle cx="400" cy="292" r="248" fill="#fff" opacity=".22"/>
+  <ellipse cx="400" cy="505" rx="230" ry="37" fill="#292524" opacity=".32"/>
+  <g filter="url(#s)" transform="translate(400 290)">
+    <circle r="205" fill="url(#metal)" stroke="#334155" stroke-width="16"/>
+    <circle r="151" fill="#dbe4ea" stroke="#64748b" stroke-width="13"/>
+    <g fill="#cbd5e1" stroke="#64748b" stroke-width="7">
+      <path d="M-15-198h30l51 161-32 10z"/><path d="m184-71 13 31-158 96-24-29z"/><path d="m113 167-28 21-104-172 31-19z"/><path d="M-122 186h-36V-19l37 3z"/><path d="m-192 40 10-32 163 86-15 32z"/><path d="m-79-176 23-29 147 132-26 29z"/>
+    </g>
+    <circle r="71" fill="url(#metal)" stroke="#475569" stroke-width="13"/>
+    <circle r="26" fill="#1e293b"/>
+  </g>
+  <path d="M267 167a178 178 0 0 1 108-79" fill="none" stroke="#fff" stroke-width="12" stroke-linecap="round" opacity=".7"/>
+  <g transform="translate(35 32)"><rect width="150" height="46" rx="23" fill="#15803d"/><text x="75" y="31" text-anchor="middle" font-family="Arial, sans-serif" font-size="18" font-weight="700" fill="#fff">DESPUÉS</text></g>
+</svg>

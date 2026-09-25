@@ -1,0 +1,20 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 500 500" role="img" aria-labelledby="t">
+  <title id="t">Mueble de hierro y forja</title>
+  <defs>
+    <linearGradient id="bg" x1="0" y1="0" x2="1" y2="1"><stop stop-color="#fff7ed"/><stop offset="1" stop-color="#fed7aa"/></linearGradient>
+    <linearGradient id="metal" x1="0" y1="0" x2="1" y2="1"><stop stop-color="#f8fafc"/><stop offset=".42" stop-color="#475569"/><stop offset=".72" stop-color="#cbd5e1"/><stop offset="1" stop-color="#1e293b"/></linearGradient>
+    <filter id="s"><feDropShadow dx="0" dy="15" stdDeviation="13" flood-color="#7c2d12" flood-opacity=".24"/></filter>
+  </defs>
+  <rect width="500" height="500" rx="48" fill="url(#bg)"/>
+  <ellipse cx="250" cy="390" rx="184" ry="35" fill="#9a3412" opacity=".15"/>
+  <g filter="url(#s)" fill="url(#metal)" stroke="#334155" stroke-width="6" stroke-linejoin="round">
+    <rect x="93" y="178" width="314" height="34" rx="17"/>
+    <path d="M137 211 119 390M363 211l18 179" fill="none" stroke-width="22" stroke-linecap="round"/>
+    <path d="M176 229v83M324 229v83" fill="none" stroke-width="16" stroke-linecap="round"/>
+    <rect x="148" y="306" width="204" height="26" rx="13"/>
+    <path d="M164 332 150 389M336 332l14 57" fill="none" stroke-width="18" stroke-linecap="round"/>
+    <path d="M139 181c-1-62 35-87 58-87s59 25 58 87" fill="none" stroke-width="18" stroke-linecap="round"/>
+  </g>
+  <path d="M124 190h87" stroke="#fff" stroke-width="7" stroke-linecap="round" opacity=".72"/>
+  <g fill="#fb923c"><circle cx="88" cy="117" r="8"/><circle cx="416" cy="136" r="6"/><circle cx="393" cy="371" r="9"/></g>
+</svg>

@@ -1,0 +1,18 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 500 500" role="img" aria-labelledby="t">
+  <title id="t">Reja metálica arenada</title>
+  <defs>
+    <linearGradient id="bg" x1="0" y1="0" x2="1" y2="1"><stop stop-color="#f0f9ff"/><stop offset="1" stop-color="#bae6fd"/></linearGradient>
+    <linearGradient id="metal" x1="0" y1="0" x2="1" y2="1"><stop stop-color="#f8fafc"/><stop offset=".42" stop-color="#64748b"/><stop offset=".7" stop-color="#cbd5e1"/><stop offset="1" stop-color="#334155"/></linearGradient>
+    <filter id="s"><feDropShadow dx="0" dy="14" stdDeviation="12" flood-color="#075985" flood-opacity=".23"/></filter>
+  </defs>
+  <rect width="500" height="500" rx="48" fill="url(#bg)"/>
+  <circle cx="250" cy="245" r="174" fill="#fff" opacity=".6"/>
+  <path d="M0 400c112-46 224-46 336 0 68 28 123 27 164 14v86H0z" fill="#7dd3fc" opacity=".25"/>
+  <g filter="url(#s)" fill="none" stroke="url(#metal)" stroke-linecap="round" stroke-linejoin="round">
+    <rect x="103" y="96" width="294" height="318" rx="12" stroke-width="25"/>
+    <path d="M145 109v292M205 109v292M265 109v292M325 109v292M365 109v292" stroke-width="18"/>
+    <path d="M115 180h270M115 328h270" stroke-width="18"/>
+  </g>
+  <path d="M130 119h45" stroke="#fff" stroke-width="7" stroke-linecap="round" opacity=".75"/>
+  <g fill="#f97316"><circle cx="92" cy="120" r="8"/><circle cx="411" cy="155" r="6"/><circle cx="389" cy="383" r="9"/></g>
+</svg>

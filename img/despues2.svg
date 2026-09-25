@@ -1,0 +1,19 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 800 600" role="img" aria-labelledby="t">
+  <title id="t">Reja recuperada y limpia después del arenado</title>
+  <defs>
+    <linearGradient id="bg" x1="0" y1="0" x2="1" y2="1"><stop stop-color="#d1d5db"/><stop offset="1" stop-color="#9ca3af"/></linearGradient>
+    <linearGradient id="metal" x1="0" y1="0" x2="1" y2="1"><stop stop-color="#f8fafc"/><stop offset=".38" stop-color="#94a3b8"/><stop offset=".7" stop-color="#e2e8f0"/><stop offset="1" stop-color="#334155"/></linearGradient>
+    <filter id="s"><feDropShadow dx="0" dy="20" stdDeviation="17" flood-color="#111827" flood-opacity=".42"/></filter>
+  </defs>
+  <rect width="800" height="600" fill="url(#bg)"/>
+  <path d="M0 520h800v80H0z" fill="#78716c"/>
+  <g opacity=".12" stroke="#fff" stroke-width="2"><path d="M0 120h800M0 250h800M0 380h800M130 0v520M290 0v520M450 0v520M610 0v520M770 0v520"/></g>
+  <ellipse cx="440" cy="511" rx="305" ry="37" fill="#292524" opacity=".35"/>
+  <g filter="url(#s)" fill="none" stroke="url(#metal)" stroke-linecap="round" stroke-linejoin="round">
+    <rect x="150" y="72" width="580" height="435" rx="14" stroke-width="35"/>
+    <path d="M217 86v407M300 86v407M383 86v407M466 86v407M549 86v407M632 86v407M702 86v407" stroke-width="25"/>
+    <path d="M164 193h552M164 382h552" stroke-width="25"/>
+  </g>
+  <path d="M183 98h80" stroke="#fff" stroke-width="9" stroke-linecap="round" opacity=".75"/>
+  <g transform="translate(35 32)"><rect width="150" height="46" rx="23" fill="#15803d"/><text x="75" y="31" text-anchor="middle" font-family="Arial, sans-serif" font-size="18" font-weight="700" fill="#fff">DESPUÉS</text></g>
+</svg>

@@ -1,0 +1,1061 @@
+﻿/* ═══════════════════════════════════════════
+   CATÁLOGO · ESTILOS
+   Inspirado en un diseño premium de piletas
+   ═══════════════════════════════════════════ */
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+:root {
+  --marino: #0b1f33;        /* color principal (navy) */
+  --azul: #123c5c;
+  --cian: #38bdf8;          /* acento agua/piletas */
+  --cian-suave: #e0f2fe;
+  --ambar: #d97706;         /* acento gas/entrega */
+  --ambar-suave: #fdecd2;
+  --verde-whatsapp: #25d366;
+  --fondo: #ffffff;
+  --fondo-claro: #f4f8fb;
+  --texto: #0b1f33;
+  --texto-suave: #5b7286;
+  --borde: #e2ecf3;
+  --sombra: 0 6px 24px rgba(11, 31, 51, 0.08);
+  --radio: 16px;
+  --radio-tarjeta: 10px;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  font-family: "Plus Jakarta Sans", "Segoe UI", Arial, sans-serif;
+  background: var(--fondo);
+  color: var(--texto);
+  line-height: 1.6;
+}
+
+em {
+  font-family: "Playfair Display", Georgia, serif;
+  font-style: italic;
+  color: var(--cian);
+}
+
+.container {
+  width: min(92%, 1100px);
+  margin: 0 auto;
+}
+
+.container--angosto {
+  max-width: 780px;
+}
+
+.ico {
+  width: 18px;
+  height: 18px;
+  vertical-align: -3px;
+}
+
+.brand {
+  display: none;
+}
+
+/* ─────────── CABECERA ─────────── */
+.header {
+  position: sticky;
+  top: 0;
+  z-index: 50;
+  background: rgba(255, 255, 255, 0.85);
+  backdrop-filter: blur(10px);
+  border-bottom: 1px solid var(--borde);
+}
+
+.header__inner {
+  width: min(92%, 1100px);
+  margin: 0 auto;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 1rem;
+  padding: 0.9rem 0;
+}
+
+.header__logo {
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+  text-decoration: none;
+  color: var(--texto);
+  font-weight: 800;
+  font-size: 1.2rem;
+}
+
+.header__logo-onda {
+  font-size: 1.4rem;
+}
+
+.header__nav {
+  display: flex;
+  gap: 1.6rem;
+}
+
+.header__nav a {
+  color: var(--texto);
+  text-decoration: none;
+  font-weight: 600;
+  font-size: 0.95rem;
+  transition: color 0.2s;
+}
+
+.header__nav a:hover {
+  color: var(--cian);
+}
+
+.header__burger {
+  display: none;
+  width: 34px;
+  height: 34px;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  gap: 5px;
+  background: none;
+  border: none;
+  cursor: pointer;
+  padding: 0;
+}
+
+.header__burger span {
+  display: block;
+  width: 22px;
+  height: 2px;
+  border-radius: 2px;
+  background: var(--texto);
+  transition: transform 0.25s, opacity 0.25s;
+}
+
+.header__burger--abierto span:nth-child(1) {
+  transform: translateY(7px) rotate(45deg);
+}
+
+.header__burger--abierto span:nth-child(2) {
+  opacity: 0;
+}
+
+.header__burger--abierto span:nth-child(3) {
+  transform: translateY(-7px) rotate(-45deg);
+}
+
+.btn-whatsapp {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.45rem;
+  background: var(--verde-whatsapp);
+  color: #fff;
+  font-weight: 700;
+  padding: 0.55rem 1.1rem;
+  border-radius: 999px;
+  text-decoration: none;
+  font-size: 0.92rem;
+  transition: filter 0.2s, transform 0.2s;
+}
+
+.btn-whatsapp:hover {
+  filter: brightness(1.05);
+  transform: translateY(-1px);
+}
+
+/* ─────────── BOTÓN COMPARTIR (cabecera) ─────────── */
+.btn-compartir-header {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.45rem;
+  background: var(--azul);
+  color: #fff;
+  font-weight: 700;
+  font-size: 0.88rem;
+  padding: 0.5rem 1rem;
+  border: none;
+  border-radius: 999px;
+  cursor: pointer;
+  transition: filter 0.2s, transform 0.2s;
+}
+
+.btn-compartir-header .ico {
+  width: 17px;
+  height: 17px;
+}
+
+.btn-compartir-header:hover {
+  filter: brightness(1.15);
+  transform: translateY(-1px);
+}
+
+/* ─────────── BOTÓN COMPARTIR CATÁLOGO ─────────── */
+.catalogo__compartir {
+  display: flex;
+  justify-content: center;
+  margin: -1.6rem 0 2.4rem;
+}
+
+.btn-compartir {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.55rem;
+  background: var(--azul);
+  color: #fff;
+  font-weight: 800;
+  font-size: 1.05rem;
+  padding: 0.75rem 1.6rem;
+  border: none;
+  border-radius: 999px;
+  cursor: pointer;
+  box-shadow: 0 8px 22px rgba(18, 60, 92, 0.4);
+  transition: filter 0.2s, transform 0.2s;
+}
+
+.btn-compartir .ico {
+  width: 20px;
+  height: 20px;
+}
+
+.btn-compartir:hover {
+  filter: brightness(1.12);
+  transform: translateY(-1px);
+}
+
+/* Aviso flotante "link copiado" */
+.aviso {
+  position: fixed;
+  left: 50%;
+  bottom: 5.5rem;
+  transform: translate(-50%, 12px);
+  background: var(--azul);
+  color: #fff;
+  padding: 0.8rem 1.4rem;
+  border-radius: 999px;
+  font-size: 0.92rem;
+  font-weight: 600;
+  text-align: center;
+  max-width: 90vw;
+  box-shadow: 0 10px 30px rgba(11, 31, 51, 0.35);
+  opacity: 0;
+  pointer-events: none;
+  z-index: 70;
+  transition: opacity 0.25s, transform 0.25s;
+}
+
+.aviso--visible {
+  opacity: 1;
+  transform: translate(-50%, 0);
+}
+
+/* ─────────── SECCIONES ─────────── */
+.seccion {
+  padding: 5rem 0;
+}
+
+.seccion--clara {
+  background: var(--fondo-claro);
+}
+
+/* Primera seccion (Servicios): como ya no hay portada grande arriba,
+   lleva un degradado suave de agua y menos aire */
+.seccion--primera {
+  padding-top: 3.2rem;
+  background: linear-gradient(180deg, var(--cian-suave) 0%, var(--fondo) 420px);
+}
+
+/* ─────────── PORTADA (titulo principal del sitio) ─────────── */
+.portada {
+  text-align: center;
+  margin-bottom: 3rem;
+}
+
+.portada__badge {
+  display: inline-block;
+  background: #fff;
+  border: 1px solid rgba(56, 189, 248, 0.45);
+  color: var(--azul);
+  font-size: 0.78rem;
+  font-weight: 700;
+  letter-spacing: 0.8px;
+  text-transform: uppercase;
+  padding: 0.45rem 1.15rem;
+  border-radius: 999px;
+  box-shadow: var(--sombra);
+  margin-bottom: 1.4rem;
+}
+
+.portada__titulo {
+  font-size: clamp(2.3rem, 6vw, 3.4rem);
+  font-weight: 800;
+  line-height: 1.1;
+  letter-spacing: -1px;
+}
+
+.portada__onda {
+  display: block;
+  width: 130px;
+  margin: 1rem auto 0;
+  color: var(--cian);
+}
+
+.portada__sub {
+  color: var(--texto-suave);
+  max-width: 560px;
+  margin: 1.1rem auto 0;
+  font-size: 1.02rem;
+}
+
+/* Entrada suave al cargar (respetando a quien pida menos movimiento) */
+.portada > * {
+  animation: aparecer 0.7s ease both;
+}
+
+.portada__titulo {
+  animation-delay: 0.1s;
+}
+
+.portada__onda {
+  animation-delay: 0.2s;
+}
+
+.portada__sub {
+  animation-delay: 0.3s;
+}
+
+@keyframes aparecer {
+  from {
+    opacity: 0;
+    transform: translateY(14px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .portada > * {
+    animation: none;
+  }
+}
+
+.titulo-seccion {
+  font-size: clamp(1.6rem, 4vw, 2.3rem);
+  font-weight: 800;
+  text-align: center;
+  letter-spacing: -0.5px;
+}
+
+.subtitulo-seccion {
+  text-align: center;
+  color: var(--texto-suave);
+  max-width: 620px;
+  margin: 0.7rem auto 2.8rem;
+}
+
+.solo-movil {
+  display: none;
+}
+
+/* ─────────── SERVICIOS ─────────── */
+.grid-servicios {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+  gap: 1.4rem;
+}
+
+.servicio {
+  background: #fff;
+  border: 1px solid var(--borde);
+  border-radius: var(--radio-tarjeta);
+  padding: 1.7rem 1.6rem;
+  box-shadow: var(--sombra);
+  transition: transform 0.2s, box-shadow 0.2s;
+}
+
+.servicio:hover {
+  transform: translateY(-4px);
+  box-shadow: 0 14px 34px rgba(11, 31, 51, 0.12);
+}
+
+.servicio__icono {
+  width: 56px;
+  height: 56px;
+  display: grid;
+  place-items: center;
+  font-size: 1.6rem;
+  background: var(--cian-suave);
+  border-radius: 14px;
+  margin-bottom: 1.1rem;
+}
+
+.servicio--gas .servicio__icono {
+  background: var(--ambar-suave);
+}
+
+.servicio__titulo {
+  font-size: 1.12rem;
+  margin-bottom: 0.5rem;
+}
+
+.servicio__texto {
+  color: var(--texto-suave);
+  font-size: 0.94rem;
+}
+
+/* ─────────── CATÁLOGO ─────────── */
+.filtros {
+  display: flex;
+  justify-content: center;
+  gap: 0.6rem;
+  flex-wrap: wrap;
+  margin-bottom: 2.4rem;
+}
+
+.filtro {
+  background: #fff;
+  color: var(--texto);
+  border: 1px solid var(--borde);
+  padding: 0.55rem 1.4rem;
+  border-radius: 999px;
+  cursor: pointer;
+  font-weight: 700;
+  font-family: inherit;
+  font-size: 0.92rem;
+  transition: background 0.2s, color 0.2s, border-color 0.2s;
+}
+
+.filtro:hover {
+  border-color: var(--cian);
+}
+
+.filtro--activo {
+  background: var(--marino);
+  color: #fff;
+  border-color: var(--marino);
+}
+
+.filtro[data-filtro="productos"]:hover {
+  border-color: var(--ambar);
+}
+
+.filtro[data-filtro="productos"].filtro--activo {
+  background: var(--ambar);
+  border-color: var(--ambar);
+}
+
+.catalogo {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+  gap: 1.2rem;
+}
+
+.catalogo__grupo-titulo {
+  grid-column: 1 / -1;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 0.55rem;
+  font-size: 1rem;
+  font-weight: 800;
+  color: var(--marino);
+  padding-bottom: 0.5rem;
+  border-bottom: 2px solid var(--borde);
+}
+
+.catalogo__grupo-titulo::before {
+  content: "";
+  width: 10px;
+  height: 10px;
+  border-radius: 50%;
+  flex-shrink: 0;
+}
+
+.catalogo__grupo-titulo--productos::before {
+  background: var(--ambar);
+}
+
+.catalogo__grupo-titulo--pileta::before {
+  background: var(--cian);
+}
+
+.catalogo__grupo-titulo--pileta {
+  margin-top: 1rem;
+}
+
+.tarjeta {
+  position: relative;
+  background: #fff;
+  border-radius: var(--radio-tarjeta);
+  overflow: hidden;
+  box-shadow: var(--sombra);
+  border: 1px solid var(--borde);
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
+  transition: transform 0.2s, box-shadow 0.2s;
+}
+
+.tarjeta:hover {
+  transform: translateY(-4px);
+  box-shadow: 0 14px 34px rgba(11, 31, 51, 0.12);
+}
+
+/* Foto centrada arriba, cuadrada y chica: el recorte es tan chico que
+   una foto de celular sin editar casi nunca queda mal */
+.tarjeta__img {
+  width: 110px;
+  min-width: 110px;
+  height: 110px;
+  margin: 1.3rem auto 0;
+  border-radius: 10px;
+  object-fit: cover;
+  object-position: center;
+}
+
+.tarjeta[data-categoria="productos"] .tarjeta__img {
+  background: var(--ambar-suave);
+}
+
+.tarjeta[data-categoria="pileta"] .tarjeta__img {
+  background: var(--cian-suave);
+}
+
+.tarjeta__cuerpo {
+  padding: 0.9rem 1.2rem 1.4rem;
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 0.2rem;
+  min-width: 0;
+}
+
+.tarjeta__titulo {
+  font-size: 0.98rem;
+  margin-bottom: 0.15rem;
+}
+
+.tarjeta__descripcion {
+  color: var(--texto-suave);
+  font-size: 0.85rem;
+}
+
+.tarjeta__etiqueta {
+  position: absolute;
+  top: 0.6rem;
+  right: 0.6rem;
+  background: var(--cian);
+  color: var(--marino);
+  font-size: 0.68rem;
+  font-weight: 800;
+  padding: 0.22rem 0.65rem;
+  border-radius: 999px;
+  box-shadow: var(--sombra);
+}
+
+.tarjeta[data-categoria="productos"] .tarjeta__etiqueta {
+  background: var(--ambar);
+  color: #fff;
+}
+
+.tarjeta__cta {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.35rem;
+  margin-top: 0.6rem;
+  background: var(--verde-whatsapp);
+  color: #fff;
+  font-weight: 700;
+  font-size: 0.82rem;
+  padding: 0.4rem 0.9rem;
+  border-radius: 999px;
+  text-decoration: none;
+  transition: filter 0.2s, transform 0.2s;
+}
+
+.tarjeta__cta .ico {
+  width: 14px;
+  height: 14px;
+}
+
+.tarjeta__cta:hover {
+  filter: brightness(1.05);
+  transform: translateY(-1px);
+}
+
+.catalogo__vacio {
+  grid-column: 1 / -1;
+  text-align: center;
+  color: var(--texto-suave);
+  padding: 2rem 0;
+}
+
+/* ─────────── FAQ ─────────── */
+.faq {
+  display: grid;
+  gap: 0.9rem;
+}
+
+.faq__item {
+  background: #fff;
+  border: 1px solid var(--borde);
+  border-radius: 14px;
+  overflow: hidden;
+  box-shadow: var(--sombra);
+}
+
+.faq__pregunta {
+  list-style: none;
+  cursor: pointer;
+  padding: 1.15rem 1.4rem;
+  font-weight: 700;
+  font-size: 1rem;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  gap: 1rem;
+  user-select: none;
+}
+
+.faq__pregunta::-webkit-details-marker {
+  display: none;
+}
+
+.faq__pregunta::after {
+  content: "+";
+  font-size: 1.5rem;
+  font-weight: 400;
+  color: var(--cian);
+  line-height: 1;
+  transition: transform 0.25s;
+}
+
+.faq__item[open] .faq__pregunta::after {
+  transform: rotate(45deg);
+}
+
+.faq__respuesta {
+  padding: 0 1.4rem 1.3rem;
+  color: var(--texto-suave);
+  font-size: 0.95rem;
+}
+
+/* ─────────── GALERÍA ─────────── */
+.galeria {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(280px, 1fr));
+  gap: 1rem;
+}
+
+.galeria__img {
+  width: 100%;
+  aspect-ratio: 4 / 3;
+  object-fit: cover;
+  object-position: center;
+  border-radius: var(--radio-tarjeta);
+  border: 1px solid var(--borde);
+  display: block;
+  box-shadow: var(--sombra);
+}
+
+.galeria__titulo {
+  text-align: center;
+  font-size: 1.15rem;
+  font-weight: 800;
+  color: var(--texto-suave);
+  margin-bottom: 1.2rem;
+}
+
+/* ─────────── ANTES Y DESPUÉS (comparador deslizante) ─────────── */
+
+/* Registra --pos como porcentaje para poder animarlo en la demo inicial */
+@property --pos {
+  syntax: "<percentage>";
+  inherits: true;
+  initial-value: 50%;
+}
+
+.antes-despues {
+  max-width: 720px;
+  margin: 0 auto 3.5rem;
+  text-align: center;
+}
+
+.antes-despues__titulo {
+  font-size: clamp(1.25rem, 3vw, 1.7rem);
+  font-weight: 800;
+  letter-spacing: -0.5px;
+}
+
+.antes-despues__ayuda {
+  color: var(--texto-suave);
+  font-size: 0.92rem;
+  margin: 0.4rem 0 1.5rem;
+}
+
+.comparador__figura {
+  margin: 0;
+}
+
+.comparador__slider {
+  --pos: 50%;
+  position: relative;
+  aspect-ratio: 4 / 3;
+  overflow: hidden;
+  border-radius: var(--radio);
+  box-shadow: var(--sombra);
+  background: var(--cian-suave);
+  cursor: ew-resize;
+  touch-action: none; /* deja arrastrar con el dedo sin scrollear la página */
+  user-select: none;
+  -webkit-user-select: none;
+}
+
+/* Demo: la barra se mueve sola una vez para enseñar cómo funciona */
+.comparador__slider--demo {
+  animation: comparador-barrido 1.8s ease-in-out 0.5s 1;
+}
+
+@keyframes comparador-barrido {
+  0%   { --pos: 50%; }
+  35%  { --pos: 78%; }
+  70%  { --pos: 28%; }
+  100% { --pos: 50%; }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .comparador__slider--demo {
+    animation: none;
+  }
+}
+
+.comparador__img {
+  position: absolute;
+  inset: 0;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  pointer-events: none;
+}
+
+/* Foto del ANTES arriba, recortada hasta la posición de la barra */
+.comparador__img--antes {
+  z-index: 1;
+  clip-path: inset(0 calc(100% - var(--pos)) 0 0);
+}
+
+.comparador__etiqueta {
+  position: absolute;
+  top: 0.8rem;
+  z-index: 2;
+  font-size: 0.7rem;
+  font-weight: 800;
+  letter-spacing: 1.5px;
+  text-transform: uppercase;
+  padding: 0.3rem 0.8rem;
+  border-radius: 999px;
+  pointer-events: none;
+  box-shadow: var(--sombra);
+}
+
+.comparador__etiqueta--antes {
+  left: 0.8rem;
+  background: rgba(11, 31, 51, 0.85);
+  color: #fff;
+}
+
+.comparador__etiqueta--despues {
+  right: 0.8rem;
+  background: var(--cian);
+  color: var(--marino);
+}
+
+.comparador__linea {
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  left: var(--pos);
+  z-index: 2;
+  width: 3px;
+  transform: translateX(-50%);
+  background: #fff;
+  box-shadow: 0 0 8px rgba(11, 31, 51, 0.45);
+  pointer-events: none;
+}
+
+.comparador__manija {
+  position: absolute;
+  top: 50%;
+  left: var(--pos);
+  z-index: 3;
+  width: 46px;
+  height: 46px;
+  transform: translate(-50%, -50%);
+  border-radius: 50%;
+  background: #fff;
+  display: grid;
+  place-items: center;
+  box-shadow: 0 4px 14px rgba(11, 31, 51, 0.35);
+  color: var(--marino);
+  cursor: ew-resize;
+}
+
+.comparador__manija:focus-visible {
+  outline: none;
+  box-shadow: 0 0 0 4px rgba(56, 189, 248, 0.6);
+}
+
+.comparador__leyenda {
+  margin-top: 1.1rem;
+  display: flex;
+  flex-direction: column;
+  gap: 0.15rem;
+  font-size: 0.93rem;
+  color: var(--texto-suave);
+}
+
+.comparador__leyenda strong {
+  color: var(--texto);
+  font-size: 1.05rem;
+}
+
+.comparador__nav {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 1rem;
+  margin-top: 1.3rem;
+}
+
+.comparador__flecha {
+  width: 42px;
+  height: 42px;
+  border-radius: 50%;
+  background: #fff;
+  border: 1px solid var(--borde);
+  display: grid;
+  place-items: center;
+  cursor: pointer;
+  color: var(--marino);
+  box-shadow: var(--sombra);
+  transition: transform 0.2s, border-color 0.2s;
+}
+
+.comparador__flecha:hover {
+  transform: translateY(-2px);
+  border-color: var(--cian);
+}
+
+.comparador__puntos {
+  display: flex;
+  gap: 0.5rem;
+}
+
+.comparador__punto {
+  width: 10px;
+  height: 10px;
+  padding: 0;
+  border: none;
+  border-radius: 50%;
+  background: #cbd5e1;
+  cursor: pointer;
+  transition: background 0.2s, transform 0.2s;
+}
+
+.comparador__punto--activo {
+  background: var(--cian);
+  transform: scale(1.3);
+}
+
+/* ─────────── FOOTER ─────────── */
+.footer {
+  background: var(--marino);
+  color: #cbd5e1;
+  padding: 3.5rem 0 0;
+}
+
+.footer__grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+  gap: 2rem;
+  padding-bottom: 2.5rem;
+}
+
+.footer__logo {
+  color: #fff;
+  font-weight: 800;
+  font-size: 1.15rem;
+  margin-bottom: 0.6rem;
+}
+
+.footer__titulo {
+  color: #fff;
+  margin-bottom: 0.9rem;
+  font-size: 1.02rem;
+}
+
+.footer__desc {
+  font-size: 0.92rem;
+  color: #94a3b8;
+  max-width: 300px;
+}
+
+.footer__link {
+  display: flex;
+  align-items: center;
+  gap: 0.55rem;
+  color: #cbd5e1;
+  text-decoration: none;
+  font-size: 0.95rem;
+  margin-bottom: 0.65rem;
+  transition: color 0.2s;
+}
+
+.footer__link:hover {
+  color: var(--cian);
+}
+
+.footer__base {
+  border-top: 1px solid rgba(255, 255, 255, 0.1);
+  padding: 1.3rem 0;
+  text-align: center;
+  font-size: 0.88rem;
+  color: #64748b;
+}
+
+.footer__dev {
+  color: #94a3b8;
+  font-weight: 700;
+  text-decoration: none;
+  transition: color 0.2s;
+}
+
+.footer__dev:hover {
+  color: var(--cian);
+  text-decoration: underline;
+}
+
+/* ─────────── BOTÓN FLOTANTE WHATSAPP ─────────── */
+.whatsapp-flotante {
+  position: fixed;
+  right: 1.2rem;
+  bottom: 1.2rem;
+  z-index: 60;
+  width: 56px;
+  height: 56px;
+  display: grid;
+  place-items: center;
+  background: var(--verde-whatsapp);
+  border-radius: 50%;
+  box-shadow: 0 8px 24px rgba(37, 211, 102, 0.45);
+  transition: transform 0.2s;
+}
+
+.whatsapp-flotante .ico {
+  width: 28px;
+  height: 28px;
+  color: #fff;
+}
+
+.whatsapp-flotante:hover {
+  transform: scale(1.08);
+}
+
+/* ─────────── MOVILES ─────────── */
+@media (max-width: 720px) {
+  .header__burger {
+    display: flex;
+  }
+
+  .header__nav {
+    position: absolute;
+    top: 100%;
+    left: 0;
+    right: 0;
+    flex-direction: column;
+    gap: 0;
+    background: #fff;
+    padding: 0.5rem 1.4rem 1rem;
+    border-bottom: 1px solid var(--borde);
+    box-shadow: 0 14px 28px rgba(11, 31, 51, 0.1);
+    transform: translateY(-8px);
+    opacity: 0;
+    visibility: hidden;
+    transition: transform 0.2s ease, opacity 0.2s ease, visibility 0.2s;
+  }
+
+  .header__nav a {
+    padding: 0.85rem 0;
+    border-bottom: 1px solid var(--borde);
+  }
+
+  .header__nav a:last-child {
+    border-bottom: none;
+  }
+
+  .header__nav--abierto {
+    transform: translateY(0);
+    opacity: 1;
+    visibility: visible;
+  }
+
+  .btn-whatsapp {
+    padding: 0.5rem 0.9rem;
+    font-size: 0.85rem;
+  }
+
+  /* En moviles el Compartir de la cabecera queda solo con el icono */
+  .btn-compartir-header {
+    width: 40px;
+    height: 40px;
+    padding: 0;
+    justify-content: center;
+    box-shadow: 0 4px 12px rgba(18, 60, 92, 0.35);
+  }
+
+  .btn-compartir-header__texto {
+    display: none;
+  }
+
+  .solo-movil {
+    display: inline;
+  }
+
+  .grid-servicios {
+    grid-template-columns: 1fr;
+  }
+
+  .galeria {
+    grid-template-columns: 1fr 1fr;
+  }
+
+  .antes-despues {
+    margin-bottom: 2.6rem;
+  }
+
+  .comparador__manija {
+    width: 40px;
+    height: 40px;
+  }
+
+  /* Sube el boton flotante para que no tape el credito del footer */
+  .whatsapp-flotante {
+    bottom: 4.6rem;
+  }
+
+  .seccion {
+    padding: 3.5rem 0;
+  }
+
+  .seccion--primera {
+    padding-top: 2.4rem;
+  }
+}

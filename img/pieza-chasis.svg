@@ -1,0 +1,21 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 500 500" role="img" aria-labelledby="t">
+  <title id="t">Chasis de vehículo desoxidado</title>
+  <defs>
+    <linearGradient id="bg" x1="0" y1="0" x2="1" y2="1"><stop stop-color="#f0fdf4"/><stop offset="1" stop-color="#bbf7d0"/></linearGradient>
+    <linearGradient id="metal" x1="0" y1="0" x2="1" y2="1"><stop stop-color="#f8fafc"/><stop offset=".4" stop-color="#475569"/><stop offset=".7" stop-color="#cbd5e1"/><stop offset="1" stop-color="#1e293b"/></linearGradient>
+    <filter id="s"><feDropShadow dx="0" dy="14" stdDeviation="12" flood-color="#14532d" flood-opacity=".22"/></filter>
+  </defs>
+  <rect width="500" height="500" rx="48" fill="url(#bg)"/>
+  <circle cx="250" cy="250" r="177" fill="#fff" opacity=".62"/>
+  <ellipse cx="250" cy="376" rx="181" ry="31" fill="#166534" opacity=".14"/>
+  <g filter="url(#s)">
+    <g fill="none" stroke="url(#metal)" stroke-linecap="round" stroke-linejoin="round">
+      <path d="M83 310h334l-24-76-72-31-32-65H181l-39 68-58 27z" stroke-width="25"/>
+      <path d="M118 260h275M188 142l-18 128M310 142l29 128M151 310l-20 65M345 310l25 65" stroke-width="18"/>
+      <circle cx="166" cy="372" r="44" stroke-width="18"/>
+      <circle cx="341" cy="372" r="44" stroke-width="18"/>
+    </g>
+    <path d="M126 248h58" stroke="#fff" stroke-width="7" stroke-linecap="round" opacity=".75"/>
+  </g>
+  <g fill="#22c55e"><circle cx="92" cy="126" r="8"/><circle cx="411" cy="157" r="6"/><circle cx="399" cy="390" r="9"/></g>
+</svg>

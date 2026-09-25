@@ -1,0 +1,18 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 500 500" role="img" aria-labelledby="t">
+  <title id="t">Objetos metálicos para recuperar</title>
+  <defs>
+    <linearGradient id="bg" x1="0" y1="0" x2="1" y2="1"><stop stop-color="#ecfeff"/><stop offset="1" stop-color="#a5f3fc"/></linearGradient>
+    <linearGradient id="metal" x1="0" y1="0" x2="1" y2="1"><stop stop-color="#f8fafc"/><stop offset=".4" stop-color="#64748b"/><stop offset=".72" stop-color="#cbd5e1"/><stop offset="1" stop-color="#475569"/></linearGradient>
+    <filter id="s"><feDropShadow dx="0" dy="14" stdDeviation="13" flood-color="#0e7490" flood-opacity=".24"/></filter>
+  </defs>
+  <rect width="500" height="500" rx="48" fill="url(#bg)"/>
+  <circle cx="250" cy="250" r="176" fill="#fff" opacity=".62"/>
+  <g filter="url(#s)">
+    <path d="M198 110h104l-13 55c-4 17 7 30 27 48 35 31 49 69 42 112-9 59-51 92-108 92s-99-33-108-92c-7-43 7-81 42-112 20-18 31-31 27-48z" fill="url(#metal)" stroke="#475569" stroke-width="7"/>
+    <ellipse cx="250" cy="111" rx="58" ry="16" fill="#334155"/>
+    <ellipse cx="250" cy="108" rx="43" ry="8" fill="#0f172a"/>
+    <path d="M171 279c47-26 111-26 158 0" fill="none" stroke="#fff" stroke-width="9" stroke-linecap="round" opacity=".55"/>
+    <path d="M185 349c44 19 86 19 130 0" fill="none" stroke="#334155" stroke-width="8" opacity=".35"/>
+  </g>
+  <g fill="#f97316"><circle cx="105" cy="155" r="9"/><circle cx="398" cy="202" r="7"/><circle cx="119" cy="346" r="5"/></g>
+</svg>

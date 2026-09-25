@@ -1,0 +1,20 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 800 600" role="img" aria-labelledby="t">
+  <title id="t">Chasis de auto con óxido antes del arenado</title>
+  <defs>
+    <linearGradient id="bg" x1="0" y1="0" x2="1" y2="1"><stop stop-color="#d8d4cd"/><stop offset="1" stop-color="#9ca3af"/></linearGradient>
+    <linearGradient id="rust" x1="0" y1="0" x2="1" y2="1"><stop stop-color="#a65a2a"/><stop offset=".35" stop-color="#5f3822"/><stop offset=".7" stop-color="#8b4b28"/><stop offset="1" stop-color="#3b241a"/></linearGradient>
+    <filter id="s"><feDropShadow dx="0" dy="20" stdDeviation="17" flood-color="#111827" flood-opacity=".4"/></filter>
+  </defs>
+  <rect width="800" height="600" fill="url(#bg)"/>
+  <path d="M0 500h800v100H0z" fill="#77716c"/>
+  <g opacity=".15" stroke="#fff" stroke-width="2"><path d="M0 120h800M0 250h800M0 380h800M130 0v500M290 0v500M450 0v500M610 0v500M770 0v500"/></g>
+  <ellipse cx="400" cy="470" rx="286" ry="46" fill="#292524" opacity=".35"/>
+  <g filter="url(#s)" fill="none" stroke="url(#rust)" stroke-linecap="round" stroke-linejoin="round">
+    <path d="M105 399h587l-54-139-132-58-55-110H304l-66 120-112 50z" stroke-width="34"/>
+    <path d="M164 330h475M326 102l-26 231M522 116l57 219M235 399l-42 70M569 399l43 70" stroke-width="25"/>
+    <circle cx="233" cy="461" r="58" stroke-width="25"/>
+    <circle cx="570" cy="461" r="58" stroke-width="25"/>
+  </g>
+  <g fill="#c67b3c" opacity=".9"><circle cx="146" cy="365" r="13"/><circle cx="232" cy="205" r="10"/><circle cx="302" cy="120" r="9"/><circle cx="408" cy="176" r="12"/><circle cx="508" cy="229" r="10"/><circle cx="602" cy="294" r="12"/><circle cx="350" cy="355" r="9"/><circle cx="551" cy="399" r="13"/><circle cx="224" cy="461" r="9"/><circle cx="578" cy="456" r="8"/></g>
+  <g transform="translate(35 32)"><rect width="120" height="46" rx="23" fill="#451a03"/><text x="60" y="31" text-anchor="middle" font-family="Arial, sans-serif" font-size="18" font-weight="700" fill="#fff">ANTES</text></g>
+</svg>

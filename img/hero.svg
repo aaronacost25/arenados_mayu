@@ -1,0 +1,110 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1000 800" role="img" aria-labelledby="titulo descripcion">
+  <title id="titulo">Arenado profesional de una reja metálica</title>
+  <desc id="descripcion">Ilustración de un operario arenando una reja en un taller industrial.</desc>
+  <defs>
+    <linearGradient id="fondo" x1="0" y1="0" x2="1" y2="1">
+      <stop offset="0" stop-color="#334653"/>
+      <stop offset="0.55" stop-color="#1d2b35"/>
+      <stop offset="1" stop-color="#101820"/>
+    </linearGradient>
+    <linearGradient id="acero" x1="0" y1="0" x2="1" y2="1">
+      <stop offset="0" stop-color="#edf3f5"/>
+      <stop offset="0.38" stop-color="#9eafb8"/>
+      <stop offset="0.7" stop-color="#dce6ea"/>
+      <stop offset="1" stop-color="#72838d"/>
+    </linearGradient>
+    <linearGradient id="naranja" x1="0" y1="0" x2="1" y2="0">
+      <stop offset="0" stop-color="#fbbf24" stop-opacity="0"/>
+      <stop offset="0.55" stop-color="#fb923c" stop-opacity="0.72"/>
+      <stop offset="1" stop-color="#fff7c2" stop-opacity="0.95"/>
+    </linearGradient>
+    <radialGradient id="polvo">
+      <stop offset="0" stop-color="#fff7c2" stop-opacity="0.95"/>
+      <stop offset="0.4" stop-color="#fb923c" stop-opacity="0.62"/>
+      <stop offset="1" stop-color="#fb923c" stop-opacity="0"/>
+    </radialGradient>
+    <pattern id="pared" width="54" height="54" patternUnits="userSpaceOnUse">
+      <path d="M0 53.5h54M53.5 0v54" fill="none" stroke="#fff" stroke-opacity="0.035"/>
+    </pattern>
+    <filter id="sombra" x="-30%" y="-30%" width="160%" height="160%">
+      <feDropShadow dx="0" dy="18" stdDeviation="18" flood-color="#020617" flood-opacity="0.45"/>
+    </filter>
+    <filter id="brillo" x="-80%" y="-80%" width="260%" height="260%">
+      <feGaussianBlur stdDeviation="18"/>
+    </filter>
+  </defs>
+
+  <rect width="1000" height="800" fill="url(#fondo)"/>
+  <rect width="1000" height="590" fill="url(#pared)"/>
+  <path d="M0 600h1000v200H0z" fill="#0b1218"/>
+  <path d="M0 600h1000" stroke="#465965" stroke-width="8"/>
+
+  <g opacity="0.24">
+    <rect x="82" y="78" width="230" height="170" rx="8" fill="#9ddcf7"/>
+    <path d="M197 78v170M82 163h230" stroke="#1d2b35" stroke-width="10"/>
+    <path d="m105 105 70 112M160 102l92 118M95 150l50-52" stroke="#fff" stroke-width="5" opacity="0.45"/>
+  </g>
+  <path d="M111 43h172" stroke="#101820" stroke-width="8"/>
+  <path d="M145 43v-36h105v36" fill="#101820"/>
+  <path d="M160 14h75l24 35H136z" fill="#17242d" stroke="#52636e" stroke-width="5"/>
+  <ellipse cx="197" cy="52" rx="32" ry="9" fill="#fde68a" opacity="0.8" filter="url(#brillo)"/>
+  <ellipse cx="197" cy="52" rx="20" ry="6" fill="#fff7c2"/>
+
+  <g opacity="0.36" stroke="#7f939f" stroke-width="5" fill="none">
+    <rect x="730" y="70" width="150" height="94" rx="8"/>
+    <path d="M805 70v94M730 117h150M755 92l20 50M850 92l-20 50"/>
+  </g>
+  <g fill="#94a3b8" opacity="0.55">
+    <circle cx="350" cy="70" r="5"/><circle cx="620" cy="98" r="4"/><circle cx="680" cy="230" r="5"/>
+    <circle cx="430" cy="42" r="3"/><circle cx="902" cy="310" r="4"/>
+  </g>
+
+  <g filter="url(#sombra)">
+    <path d="M498 180h382v402H498z" fill="#101820" opacity="0.5"/>
+    <g fill="none" stroke="url(#acero)" stroke-linecap="round" stroke-linejoin="round">
+      <rect x="472" y="166" width="400" height="430" rx="12" stroke-width="28"/>
+      <path d="M492 580V186M588 580V186M684 580V186M780 580V186M852 580V186" stroke-width="23"/>
+      <path d="M486 292h372M486 448h372" stroke-width="20"/>
+    </g>
+    <path d="M505 195h65" stroke="#fff" stroke-width="7" stroke-linecap="round" opacity="0.75"/>
+    <path d="M695 205h58" stroke="#fff" stroke-width="5" stroke-linecap="round" opacity="0.5"/>
+  </g>
+
+  <ellipse cx="452" cy="375" rx="185" ry="175" fill="url(#polvo)"/>
+  <path d="M390 374 875 270v210L390 388z" fill="url(#naranja)" opacity="0.33"/>
+  <g fill="#fff1b8">
+    <circle cx="404" cy="265" r="7"/><circle cx="430" cy="217" r="4"/><circle cx="462" cy="302" r="5"/>
+    <circle cx="384" cy="346" r="4"/><circle cx="446" cy="424" r="6"/><circle cx="415" cy="478" r="3"/>
+    <circle cx="468" cy="183" r="3"/><circle cx="393" cy="394" r="3"/>
+  </g>
+  <g stroke="#fbbf24" stroke-width="5" stroke-linecap="round" opacity="0.85">
+    <path d="m410 293 25-17"/><path d="m434 346 31-20"/><path d="m402 429 29-20"/>
+    <path d="m432 242 24-18"/><path d="m443 472 27-18"/>
+  </g>
+
+  <g transform="translate(112 202)" filter="url(#sombra)">
+    <path d="M76 32c0-38 28-62 66-62s66 24 66 62c0 27-15 45-33 55v33H109V87C89 77 76 57 76 32z" fill="#e8752c"/>
+    <path d="M82 29c0-30 24-49 60-49s60 19 60 49c0 22-13 37-29 46H111c-16-9-29-24-29-46z" fill="#263946"/>
+    <path d="M91 22c15-27 67-33 96 0l-8 19H99z" fill="#f8d34e"/>
+    <rect x="124" y="17" width="36" height="20" rx="6" fill="#dff7ff" opacity="0.9"/>
+    <path d="M95 108h94l22 210H76z" fill="#20313d"/>
+    <path d="M109 118h66l8 100h-82z" fill="#314b5a"/>
+    <path d="M160 128c58 6 90 19 116 49l52 61-32 27-60-51-81-28z" fill="#d8833a"/>
+    <path d="m310 230 102 22-12 38-105-18z" fill="#cbd7dc"/>
+    <path d="m398 258 66-6 3 35-68 4z" fill="#263946"/>
+    <path d="M445 277c43 7 72 32 95 61" fill="none" stroke="#17242d" stroke-width="18" stroke-linecap="round"/>
+    <path d="M89 315h-39v141h72V348" fill="#17242d"/>
+  </g>
+
+  <g transform="translate(344 612)">
+    <ellipse cx="376" cy="46" rx="230" ry="35" fill="#020617" opacity="0.55"/>
+    <rect x="126" y="0" width="500" height="26" rx="13" fill="#334651"/>
+    <path d="M164 20v76M580 20v76" stroke="#536873" stroke-width="18" stroke-linecap="round"/>
+  </g>
+
+  <g transform="translate(704 694)">
+    <rect width="236" height="62" rx="31" fill="#0b1f33" opacity="0.9"/>
+    <circle cx="36" cy="31" r="18" fill="#f97316"/>
+    <text x="66" y="39" font-family="Arial, sans-serif" font-size="22" font-weight="700" fill="#fff">ARENADO MAYU</text>
+  </g>
+</svg>

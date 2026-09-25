@@ -1,0 +1,21 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 800 600" role="img" aria-labelledby="t">
+  <title id="t">Chasis de auto desoxidado después del arenado</title>
+  <defs>
+    <linearGradient id="bg" x1="0" y1="0" x2="1" y2="1"><stop stop-color="#d8d4cd"/><stop offset="1" stop-color="#9ca3af"/></linearGradient>
+    <linearGradient id="metal" x1="0" y1="0" x2="1" y2="1"><stop stop-color="#f8fafc"/><stop offset=".35" stop-color="#94a3b8"/><stop offset=".68" stop-color="#e2e8f0"/><stop offset="1" stop-color="#475569"/></linearGradient>
+    <filter id="s"><feDropShadow dx="0" dy="20" stdDeviation="17" flood-color="#111827" flood-opacity=".4"/></filter>
+  </defs>
+  <rect width="800" height="600" fill="url(#bg)"/>
+  <path d="M0 500h800v100H0z" fill="#77716c"/>
+  <g opacity=".15" stroke="#fff" stroke-width="2"><path d="M0 120h800M0 250h800M0 380h800M130 0v500M290 0v500M450 0v500M610 0v500M770 0v500"/></g>
+  <ellipse cx="400" cy="470" rx="286" ry="46" fill="#292524" opacity=".35"/>
+  <g filter="url(#s)" fill="none" stroke="url(#metal)" stroke-linecap="round" stroke-linejoin="round">
+    <path d="M105 399h587l-54-139-132-58-55-110H304l-66 120-112 50z" stroke-width="34"/>
+    <path d="M164 330h475M326 102l-26 231M522 116l57 219M235 399l-42 70M569 399l43 70" stroke-width="25"/>
+    <circle cx="233" cy="461" r="58" stroke-width="25"/>
+    <circle cx="570" cy="461" r="58" stroke-width="25"/>
+  </g>
+  <g fill="#64748b"><circle cx="233" cy="461" r="15"/><circle cx="570" cy="461" r="15"/></g>
+  <path d="M145 338h115" stroke="#fff" stroke-width="8" stroke-linecap="round" opacity=".75"/>
+  <g transform="translate(35 32)"><rect width="150" height="46" rx="23" fill="#15803d"/><text x="75" y="31" text-anchor="middle" font-family="Arial, sans-serif" font-size="18" font-weight="700" fill="#fff">DESPUÉS</text></g>
+</svg>

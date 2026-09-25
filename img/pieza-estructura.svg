@@ -1,0 +1,16 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 500 500" role="img" aria-labelledby="t">
+  <title id="t">Estructura metálica para arenado</title>
+  <defs>
+    <linearGradient id="bg" x1="0" y1="0" x2="1" y2="1"><stop stop-color="#f8fafc"/><stop offset="1" stop-color="#cbd5e1"/></linearGradient>
+    <linearGradient id="metal" x1="0" y1="0" x2="1" y2="1"><stop stop-color="#f1f5f9"/><stop offset=".4" stop-color="#475569"/><stop offset=".68" stop-color="#cbd5e1"/><stop offset="1" stop-color="#1e293b"/></linearGradient>
+    <filter id="s"><feDropShadow dx="0" dy="14" stdDeviation="12" flood-color="#0f172a" flood-opacity=".26"/></filter>
+  </defs>
+  <rect width="500" height="500" rx="48" fill="url(#bg)"/>
+  <g opacity=".22" stroke="#334155" stroke-width="2"><path d="M0 100h500M0 200h500M0 300h500M0 400h500M100 0v500M200 0v500M300 0v500M400 0v500"/></g>
+  <g filter="url(#s)" fill="none" stroke="url(#metal)" stroke-width="28" stroke-linecap="round" stroke-linejoin="round">
+    <path d="M115 390V116h273v274M164 116v274M337 116v274M115 256h273"/>
+    <path d="m164 256-66 80M337 256l65 80" stroke-width="20"/>
+  </g>
+  <g fill="#fff" opacity=".65"><circle cx="115" cy="116" r="7"/><circle cx="337" cy="256" r="7"/></g>
+  <g fill="#f97316"><circle cx="88" cy="93" r="8"/><circle cx="416" cy="165" r="6"/><circle cx="405" cy="395" r="9"/></g>
+</svg>

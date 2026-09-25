@@ -1,0 +1,26 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 500 500" role="img" aria-labelledby="t">
+  <title id="t">Llanta de aleación desoxidada</title>
+  <defs>
+    <linearGradient id="bg" x1="0" y1="0" x2="1" y2="1"><stop stop-color="#f0fdf4"/><stop offset="1" stop-color="#a7f3d0"/></linearGradient>
+    <radialGradient id="metal"><stop stop-color="#f8fafc"/><stop offset=".45" stop-color="#94a3b8"/><stop offset=".72" stop-color="#e2e8f0"/><stop offset="1" stop-color="#334155"/></radialGradient>
+    <filter id="s"><feDropShadow dx="0" dy="15" stdDeviation="13" flood-color="#064e3b" flood-opacity=".25"/></filter>
+  </defs>
+  <rect width="500" height="500" rx="48" fill="url(#bg)"/>
+  <circle cx="250" cy="245" r="177" fill="#fff" opacity=".58"/>
+  <g filter="url(#s)">
+    <circle cx="250" cy="245" r="153" fill="url(#metal)" stroke="#334155" stroke-width="12"/>
+    <circle cx="250" cy="245" r="113" fill="#e2e8f0" stroke="#64748b" stroke-width="10"/>
+    <g fill="#cbd5e1" stroke="#64748b" stroke-width="5">
+      <path d="M238 65h24l35 132-22 7z"/>
+      <path d="m414 205 10 22-108 88-16-19z"/>
+      <path d="m356 398-18 14-72-118 21-12z"/>
+      <path d="M157 412-18 14 24-128-10z"/>
+      <path d="m70 232-12-20 108-88 17 20z"/>
+      <path d="m181 76 14-20 101 90-17 19z"/>
+    </g>
+    <circle cx="250" cy="245" r="52" fill="url(#metal)" stroke="#475569" stroke-width="10"/>
+    <circle cx="250" cy="245" r="20" fill="#334155"/>
+    <g fill="#475569"><circle cx="250" cy="212" r="6"/><circle cx="280" cy="234" r="6"/><circle cx="270" cy="269" r="6"/><circle cx="230" cy="269" r="6"/><circle cx="220" cy="234" r="6"/></g>
+  </g>
+  <path d="M152 142a133 133 0 0 1 93-58" fill="none" stroke="#fff" stroke-width="9" stroke-linecap="round" opacity=".7"/>
+</svg>

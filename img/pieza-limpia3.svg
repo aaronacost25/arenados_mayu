@@ -1,0 +1,22 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 800 600" role="img" aria-labelledby="t">
+  <title id="t">Reja recuperada mediante arenado</title>
+  <defs>
+    <linearGradient id="bg" x1="0" y1="0" x2="1" y2="1"><stop stop-color="#0c4a6e"/><stop offset="1" stop-color="#082f49"/></linearGradient>
+    <linearGradient id="metal" x1="0" y1="0" x2="1" y2="1"><stop stop-color="#f8fafc"/><stop offset=".38" stop-color="#94a3b8"/><stop offset=".7" stop-color="#e2e8f0"/><stop offset="1" stop-color="#334155"/></linearGradient>
+    <radialGradient id="glow"><stop stop-color="#fb923c" stop-opacity=".55"/><stop offset="1" stop-color="#fb923c" stop-opacity="0"/></radialGradient>
+    <filter id="s"><feDropShadow dx="0" dy="22" stdDeviation="18" flood-color="#020617" flood-opacity=".55"/></filter>
+  </defs>
+  <rect width="800" height="600" fill="url(#bg)"/>
+  <circle cx="135" cy="260" r="240" fill="url(#glow)"/>
+  <path d="M0 520h800v80H0z" fill="#061827"/>
+  <g opacity=".13" stroke="#e0f2fe"><path d="M0 120h800M0 250h800M0 380h800M130 0v520M290 0v520M450 0v520M610 0v520M770 0v520"/></g>
+  <ellipse cx="440" cy="511" rx="305" ry="37" fill="#020617" opacity=".65"/>
+  <g filter="url(#s)" fill="none" stroke="url(#metal)" stroke-linecap="round" stroke-linejoin="round">
+    <rect x="150" y="72" width="580" height="435" rx="14" stroke-width="35"/>
+    <path d="M217 86v407M300 86v407M383 86v407M466 86v407M549 86v407M632 86v407M702 86v407" stroke-width="25"/>
+    <path d="M164 193h552M164 382h552" stroke-width="25"/>
+  </g>
+  <path d="M183 98h80" stroke="#fff" stroke-width="9" stroke-linecap="round" opacity=".75"/>
+  <g fill="#fdba74"><circle cx="120" cy="181" r="6"/><circle cx="145" cy="242" r="4"/><circle cx="112" cy="312" r="5"/><circle cx="139" cy="385" r="3"/></g>
+  <g transform="translate(635 40)"><rect width="130" height="45" rx="22" fill="#22c55e"/><text x="65" y="30" text-anchor="middle" font-family="Arial, sans-serif" font-size="18" font-weight="700" fill="#fff">LISTO</text></g>
+</svg>
