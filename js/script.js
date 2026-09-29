@@ -25,7 +25,8 @@ if (btnMenu && menuMovil) {
 // ═══ Nombre del negocio (se define en index.html) ═══
 const marca = document.querySelector(".brand");
 const nombreNegocio = marca ? marca.dataset.nombre : "Arenados Mayu";
-document.getElementById("logo-texto").textContent = nombreNegocio;
+const logoTexto = document.getElementById("logo-texto");
+if (logoTexto) logoTexto.textContent = nombreNegocio;
 
 // ═══ Catálogo ═══
 const contenedor = document.getElementById("catalogo-grid");
