@@ -35,7 +35,7 @@ const PRODUCTOS = [
     categoria: "pieza",
     descripcion: "Objetos de metal que quieras recuperar: portavelas, adornos, marcos y todo lo que se pueda arenar. Consultanos!",
     etiqueta: "",
-    imagen: "img/pieza-objeto.svg",
+    imagen: "img/pieza-objeto.jpg",
     mensaje: "Hola! Quería consultar por el arenado de un objeto."
   },
 
