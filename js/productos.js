@@ -41,14 +41,6 @@ const PRODUCTOS = [
 
   // ────────── ESTRUCTURAS Y HERRERÍA ──────────
   {
-    nombre: "Rejas y portones",
-    categoria: "estructura",
-    descripcion: "Arenado de rejas, portones y barandas. Sacamos el óxido y la pintura saltada para que vuelvan a lucir como nuevas.",
-    etiqueta: "Más pedido",
-    imagen: "img/pieza-reja.svg",
-    mensaje: "Hola! Quería consultar por el arenado de una reja / portón."
-  },
-  {
     nombre: "Muebles de hierro",
     categoria: "estructura",
     descripcion: "Mesas, sillas y bancos de hierro y forja. Limpiamos el óxido y preparamos la superficie para pintura o restauración.",
@@ -81,5 +73,13 @@ const PRODUCTOS = [
     etiqueta: "",
     imagen: "img/pieza-llanta.jpg",
     mensaje: "Hola! Quería consultar por el arenado de llantas / aros."
+  },
+  {
+    nombre: "Piezas de moto y bicicleta",
+    categoria: "vehiculo",
+    descripcion: "Chasis, motor, llantas y repuestos de motos y bicicletas. Los dejamos sin óxido y listos para que los vuelvas a armar o pintar.",
+    etiqueta: "",
+    imagen: "img/pieza-moto.jpg",
+    mensaje: "Hola! Quería consultar por el arenado de piezas de moto / bici."
   },
 ];
