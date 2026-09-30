@@ -20,7 +20,7 @@ const ANTES_DESPUES = [
     // 💡 ALINEACIÓN VERTICAL: la foto del "antes" se sacó un poco más arriba
     //    que la del "después". Este valor la baja para que ambas coincidan.
     //    Menor a 50% = baja el ANTES / Mayor a 50% = lo sube.
-    posAntes: "48%"
+    posAntes: "46.5%"
   }
 
   // 👉 Para sumar otro trabajo real, copiá el bloque de arriba y cambialo:
