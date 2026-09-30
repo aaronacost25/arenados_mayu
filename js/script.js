@@ -297,8 +297,8 @@ trabajosConFotos().then((trabajos) => {
     return `
       <figure class="comparador__figura">
         <div class="comparador__slider comparador__slider--demo">
-          <img class="comparador__img" src="${trabajo.despues}" alt="Después: ${trabajo.titulo}" draggable="false">
-          <img class="comparador__img comparador__img--antes" src="${trabajo.antes}" alt="Antes: ${trabajo.titulo}" draggable="false">
+          <img class="comparador__img" src="${trabajo.despues}" alt="Después: ${trabajo.titulo}" draggable="false"${trabajo.posDespues ? ` style="object-position: 50% ${trabajo.posDespues}"` : ""}>
+          <img class="comparador__img comparador__img--antes" src="${trabajo.antes}" alt="Antes: ${trabajo.titulo}" draggable="false"${trabajo.posAntes ? ` style="object-position: 50% ${trabajo.posAntes}"` : ""}>
           <span class="comparador__etiqueta comparador__etiqueta--antes">Antes</span>
           <span class="comparador__etiqueta comparador__etiqueta--despues">Después</span>
           <div class="comparador__linea" aria-hidden="true"></div>

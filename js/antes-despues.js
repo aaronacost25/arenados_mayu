@@ -16,7 +16,11 @@ const ANTES_DESPUES = [
     titulo: "Estufa restaurada",
     descripcion: "Arenado de esta estufa: sacamos la pintura vieja y todo el óxido. Quedó limpia y lista para volver a pintar.",
     antes: "img/estufa_antes.jpg",
-    despues: "img/estufa_despues.jpg"
+    despues: "img/estufa_despues.jpg",
+    // 💡 ALINEACIÓN VERTICAL: la foto del "antes" se sacó un poco más arriba
+    //    que la del "después". Este valor la baja para que ambas coincidan.
+    //    Menor a 50% = baja el ANTES / Mayor a 50% = lo sube.
+    posAntes: "48%"
   }
 
   // 👉 Para sumar otro trabajo real, copiá el bloque de arriba y cambialo:
