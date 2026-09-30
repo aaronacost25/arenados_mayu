@@ -19,7 +19,7 @@ const PRODUCTOS = [
     categoria: "pieza",
     descripcion: "Mesas, sillas, cajones y muebles de madera. Limpiamos la pintura y el barniz viejos sin romper la fibra para dejarlos listos para restaurar o barnizar.",
     etiqueta: "",
-    imagen: "img/pieza-madera.svg",
+    imagen: "img/pieza-madera.jpg",
     mensaje: "Hola! Quería consultar por el arenado / limpieza de un mueble de madera."
   },
   {
@@ -53,7 +53,7 @@ const PRODUCTOS = [
     categoria: "estructura",
     descripcion: "Mesas, sillas y bancos de hierro y forja. Limpiamos el óxido y preparamos la superficie para pintura o restauración.",
     etiqueta: "",
-    imagen: "img/pieza-mueble.svg",
+    imagen: "img/pieza-mueble.jpg",
     mensaje: "Hola! Quería consultar por el arenado de un mueble de hierro."
   },
   {
@@ -61,7 +61,7 @@ const PRODUCTOS = [
     categoria: "estructura",
     descripcion: "Vigas, columnas, escaleras y estructuras metálicas. Arenado a medida para piezas grandes que traés al taller.",
     etiqueta: "",
-    imagen: "img/pieza-estructura.svg",
+    imagen: "img/pieza-estructura.jpg",
     mensaje: "Hola! Quería consultar por el arenado de una estructura metálica."
   },
 
@@ -71,7 +71,7 @@ const PRODUCTOS = [
     categoria: "vehiculo",
     descripcion: "Arenado completo de chasis, carrocería y piezas de autos: sacamos el óxido y la pintura vieja para dejarlo listo para pintar.",
     etiqueta: "Más pedido",
-    imagen: "img/pieza-chasis.svg",
+    imagen: "img/pieza-chasis.jpg",
     mensaje: "Hola! Quería consultar por el arenado de un chasis / pieza de auto."
   },
   {
@@ -79,15 +79,7 @@ const PRODUCTOS = [
     categoria: "vehiculo",
     descripcion: "Desoxidamos llantas y aros de aleación para que queden impecables y listos para pintura o reacondicionamiento.",
     etiqueta: "",
-    imagen: "img/pieza-llanta.svg",
+    imagen: "img/pieza-llanta.jpg",
     mensaje: "Hola! Quería consultar por el arenado de llantas / aros."
-  },
-  {
-    nombre: "Piezas de moto y bicicleta",
-    categoria: "vehiculo",
-    descripcion: "Chasis, llantas y repuestos de motos y bicicletas. Las dejamos sin óxido y listas para que las vuelvas a armar.",
-    etiqueta: "",
-    imagen: "img/pieza-moto.svg",
-    mensaje: "Hola! Quería consultar por el arenado de piezas de moto / bici."
   },
 ];
