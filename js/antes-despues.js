@@ -13,21 +13,18 @@
 
 const ANTES_DESPUES = [
   {
-    titulo: "Chasis desoxidado",
-    descripcion: "Arenado completo de un chasis de auto: sacamos el óxido y la pintura vieja al 100%.",
-    antes: "img/antes1.svg",
-    despues: "img/despues1.svg"
-  },
-  {
-    titulo: "Reja recuperada",
-    descripcion: "Arenado de reja y portón: quedó impecable y lista para pintar, como recién hecha.",
-    antes: "img/antes2.svg",
-    despues: "img/despues2.svg"
-  },
-  {
-    titulo: "Llantas como nuevas",
-    descripcion: "Desoxidamos estas llantas de aleación para reacondicionarlas. Nivel de detalle total.",
-    antes: "img/antes3.svg",
-    despues: "img/despues3.svg"
+    titulo: "Estufa restaurada",
+    descripcion: "Arenado de esta estufa: sacamos la pintura vieja y todo el óxido. Quedó limpia y lista para volver a pintar.",
+    antes: "img/estufa_antes.jpg",
+    despues: "img/estufa_despues.jpg"
   }
+
+  // 👉 Para sumar otro trabajo real, copiá el bloque de arriba y cambialo:
+  //
+  // {
+  //   titulo: "Reja recuperada",
+  //   descripcion: "Arenado de reja y portón: quedó impecable y lista para pintar.",
+  //   antes: "img/reja_antes.jpg",
+  //   despues: "img/reja_despues.jpg"
+  // },
 ];
