@@ -15,19 +15,19 @@
 const PRODUCTOS = [
   // ────────── PIEZAS SUELTAS ──────────
   {
-    nombre: "Herramientas y maquinaria",
+    nombre: "Muebles de madera",
     categoria: "pieza",
-    descripcion: "Herramientas, máquinas y equipos antiguos. Desoxidado y limpieza profunda para restaurarlos o prepararlos para pintar.",
+    descripcion: "Mesas, sillas, cajones y muebles de madera. Limpiamos la pintura y el barniz viejos sin romper la fibra para dejarlos listos para restaurar o barnizar.",
     etiqueta: "",
-    imagen: "img/pieza-herramienta.svg",
-    mensaje: "Hola! Quería consultar por el arenado de una herramienta / máquina."
+    imagen: "img/pieza-madera.svg",
+    mensaje: "Hola! Quería consultar por el arenado / limpieza de un mueble de madera."
   },
   {
     nombre: "Piezas industriales y repuestos",
     categoria: "pieza",
     descripcion: "Repuestos, engranajes y piezas sueltas de maquinaria. Las limpiamos y desoxidamos para que queden como nuevas.",
     etiqueta: "",
-    imagen: "img/pieza-industrial.svg",
+    imagen: "img/pieza-industrial.jpg",
     mensaje: "Hola! Quería consultar por el arenado de una pieza industrial."
   },
   {
