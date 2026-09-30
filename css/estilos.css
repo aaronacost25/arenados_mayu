@@ -361,7 +361,9 @@ em {
 .hero__img img {
   display: block;
   width: 100%;
-  aspect-ratio: 5 / 4;
+  /* Proporción de la imagen principal (1400x731) para que no se recorte nada */
+  aspect-ratio: 1.92 / 1;
+  height: auto;
   object-fit: cover;
   border: 7px solid var(--carbon);
   border-radius: 24px;
