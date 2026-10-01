@@ -52,11 +52,13 @@ function linkWhatsapp(articulo) {
   return `https://wa.me/${NUMERO_WSP}?text=${encodeURIComponent(texto)}`;
 }
 
+// Si algún servicio se carga sin "imagen", se le muestra una foto real
+// de la misma categoría (no un dibujo de ejemplo).
 function imagenGeneral(articulo) {
   const imagenes = {
-    pieza: "img/pieza-objeto.svg",
-    estructura: "img/pieza-estructura.svg",
-    vehiculo: "img/pieza-chasis.svg",
+    pieza: "img/pieza-objeto.jpg",
+    estructura: "img/pieza-estructura.jpg",
+    vehiculo: "img/pieza-chasis.jpg",
   };
   return imagenes[articulo.categoria] || imagenes.pieza;
 }

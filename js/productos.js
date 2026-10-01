@@ -20,7 +20,7 @@ const PRODUCTOS = [
     descripcion: "Mesas, sillas, cajones y muebles de madera. Limpiamos la pintura y el barniz viejos sin romper la fibra para dejarlos listos para restaurar o barnizar.",
     etiqueta: "",
     imagen: "img/pieza-madera.jpg",
-    mensaje: "Hola! Quería consultar por el arenado / limpieza de un mueble de madera."
+    mensaje: "Hola! Quería consultar por el arenado o limpieza de un mueble de madera."
   },
   {
     nombre: "Piezas industriales y repuestos",
@@ -64,7 +64,7 @@ const PRODUCTOS = [
     descripcion: "Arenado completo de chasis, carrocería y piezas de autos: sacamos el óxido y la pintura vieja para dejarlo listo para pintar.",
     etiqueta: "Más pedido",
     imagen: "img/pieza-chasis.jpg",
-    mensaje: "Hola! Quería consultar por el arenado de un chasis / pieza de auto."
+    mensaje: "Hola! Quería consultar por el arenado de un chasis o una pieza de auto."
   },
   {
     nombre: "Llantas y aros",
@@ -72,7 +72,7 @@ const PRODUCTOS = [
     descripcion: "Desoxidamos llantas y aros de aleación para que queden impecables y listos para pintura o reacondicionamiento.",
     etiqueta: "",
     imagen: "img/pieza-llanta.jpg",
-    mensaje: "Hola! Quería consultar por el arenado de llantas / aros."
+    mensaje: "Hola! Quería consultar por el arenado de llantas o aros."
   },
   {
     nombre: "Piezas de moto y bicicleta",
@@ -80,6 +80,6 @@ const PRODUCTOS = [
     descripcion: "Chasis, motor, llantas y repuestos de motos y bicicletas. Los dejamos sin óxido y listos para que los vuelvas a armar o pintar.",
     etiqueta: "",
     imagen: "img/pieza-moto.jpg",
-    mensaje: "Hola! Quería consultar por el arenado de piezas de moto / bici."
+    mensaje: "Hola! Quería consultar por el arenado de piezas de moto o bici."
   },
 ];
