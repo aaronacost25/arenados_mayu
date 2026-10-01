@@ -21,6 +21,14 @@ const ANTES_DESPUES = [
     //    que la del "después". Este valor la baja para que ambas coincidan.
     //    Menor a 50% = baja el ANTES / Mayor a 50% = lo sube.
     posAntes: "45.5%"
+  },
+  {
+    titulo: "Llantas arenadas",
+    descripcion: "Arenado de estas llantas de auto: sacamos la pintura vieja y todo el óxido. Quedaron limpias y listas para pintar.",
+    antes: "img/llanta-antes.jpg",
+    despues: "img/llanta-despues.jpg"
+    // Sin posAntes: estas dos fotos se sacaron desde el mismo lugar,
+    // así que ya coinciden (desvío medido: 0 px).
   }
 
   // 👉 Para sumar otro trabajo real, copiá el bloque de arriba y cambialo:
