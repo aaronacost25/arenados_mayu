@@ -28,6 +28,8 @@
 
 html {
   scroll-behavior: smooth;
+  /* Evita que el header fijo tape el título al navegar por los anclas (#servicios, etc.) */
+  scroll-padding-top: 84px;
 }
 
 body {
@@ -35,6 +37,14 @@ body {
   background: var(--negro);
   color: var(--plata);
   line-height: 1.6;
+}
+
+/* Foco visible para quien navega con teclado */
+a:focus-visible,
+button:focus-visible,
+summary:focus-visible {
+  outline: 2px solid var(--cobre);
+  outline-offset: 3px;
 }
 
 em {
@@ -55,10 +65,24 @@ em {
   max-width: 780px;
 }
 
+/* Íconos SVG: tamaño base + dos variantes (relleno / línea) */
 .ico {
   width: 18px;
   height: 18px;
   vertical-align: -3px;
+  flex-shrink: 0;
+}
+
+.ico--wa {
+  fill: currentColor;
+}
+
+.ico--linea {
+  fill: none;
+  stroke: currentColor;
+  stroke-width: 2;
+  stroke-linecap: round;
+  stroke-linejoin: round;
 }
 
 .brand {
@@ -93,17 +117,14 @@ em {
   color: var(--plata-brillo);
   font-weight: 800;
   font-size: 1.1rem;
+  min-width: 0;
 }
 
 .header__logo-img {
   height: 42px;
   width: auto;
+  max-width: 100%;
   display: block;
-}
-
-.header__logo-onda {
-  font-size: 1.4rem;
-  filter: grayscale(1) brightness(1.4);
 }
 
 .header__nav {
@@ -158,12 +179,13 @@ em {
   transform: translateY(-7px) rotate(-45deg);
 }
 
+/* Botón de WhatsApp: texto oscuro sobre verde (contraste ≈10:1; con blanco daba ≈2:1) */
 .btn-whatsapp {
   display: inline-flex;
   align-items: center;
   gap: 0.45rem;
   background: var(--verde-whatsapp);
-  color: #fff;
+  color: var(--negro);
   font-weight: 700;
   padding: 0.55rem 1.1rem;
   border-radius: 999px;
@@ -277,6 +299,91 @@ em {
   background: linear-gradient(180deg, var(--carbon) 0%, var(--negro) 420px);
 }
 
+/* ─────────── FRANJA "ARENADO A DOMICILIO" ─────────── */
+/* Banda fina entre el hero y los servicios. El leve cobre del fondo la
+   marca como aviso, y no como una tarjeta más del catálogo. */
+.domicilio {
+  background:
+    radial-gradient(circle at 10% 0%, rgba(200, 118, 58, 0.16), transparent 20rem),
+    var(--carbon);
+  border-top: 1px solid var(--acero-linea);
+  border-bottom: 1px solid var(--acero-linea);
+}
+
+.domicilio__inner {
+  display: flex;
+  align-items: center;
+  gap: 1.4rem;
+  max-width: 1180px;
+  margin: 0 auto;
+  padding: 1.6rem 1.5rem;
+}
+
+.domicilio__icono {
+  flex: 0 0 auto;
+  display: grid;
+  place-items: center;
+  width: 3.2rem;
+  height: 3.2rem;
+  color: var(--cobre);
+  background: var(--cobre-suave);
+  border: 1px solid rgba(200, 118, 58, 0.35);
+  border-radius: 50%;
+}
+
+.domicilio__icono .ico {
+  width: 24px;
+  height: 24px;
+  vertical-align: 0;
+}
+
+.domicilio__texto {
+  flex: 1 1 auto;
+  min-width: 0;
+}
+
+.domicilio__titulo {
+  font-family: "Playfair Display", Georgia, serif;
+  font-size: clamp(1.15rem, 2.4vw, 1.6rem);
+  color: var(--plata-brillo);
+  line-height: 1.25;
+  margin-bottom: 0.25rem;
+}
+
+.domicilio__titulo em {
+  color: var(--cobre);
+  font-style: italic;
+}
+
+.domicilio__desc {
+  color: var(--acero);
+  font-size: 0.94rem;
+  line-height: 1.5;
+  max-width: 62ch;
+}
+
+.domicilio__cta {
+  flex: 0 0 auto;
+  white-space: nowrap;
+}
+
+@media (max-width: 820px) {
+  .domicilio__inner {
+    flex-wrap: wrap;
+    gap: 1rem;
+    padding: 1.4rem 1.15rem;
+  }
+
+  .domicilio__texto {
+    flex: 1 1 55%;
+  }
+
+  .domicilio__cta {
+    flex: 1 1 100%;
+    justify-content: center;
+  }
+}
+
 /* ─────────── PORTADA (hero del sitio) ─────────── */
 .hero {
   overflow: hidden;
@@ -305,6 +412,7 @@ em {
 .hero__badge {
   display: inline-flex;
   align-items: center;
+  gap: 0.4rem;
   background: var(--carbon);
   border: 1px solid var(--acero-linea);
   color: var(--plata-brillo);
@@ -315,6 +423,13 @@ em {
   padding: 0.45rem 1.15rem;
   border-radius: 999px;
   margin-bottom: 1.2rem;
+}
+
+.hero__badge .ico {
+  width: 15px;
+  height: 15px;
+  color: var(--cobre);
+  vertical-align: 0;
 }
 
 .hero__titulo {
@@ -361,8 +476,9 @@ em {
 .hero__img img {
   display: block;
   width: 100%;
-  /* Proporción de la imagen principal (1400x731) para que no se recorte nada */
-  aspect-ratio: 1.92 / 1;
+  /* Proporción 3:2: la foto gana altura frente al título. Si querés ver la imagen
+     completa sin recorte, volvé a 1.92 / 1 (proporción original 1400x731). */
+  aspect-ratio: 3 / 2;
   height: auto;
   object-fit: cover;
   border: 7px solid var(--carbon);
@@ -450,12 +566,18 @@ em {
   height: 56px;
   display: grid;
   place-items: center;
-  font-size: 1.6rem;
+  color: var(--cobre);
   background: var(--carbon-claro);
   border: 1px solid var(--acero-linea);
   border-radius: 14px;
   margin-bottom: 1.1rem;
-  filter: grayscale(0.35);
+}
+
+.servicio__icono .ico {
+  width: 28px;
+  height: 28px;
+  stroke-width: 1.8;
+  vertical-align: 0;
 }
 
 .servicio__titulo {
@@ -588,13 +710,14 @@ em {
   font-size: 0.85rem;
 }
 
+/* Etiqueta: texto oscuro sobre cobre (con claro el contraste era ≈3:1) */
 .tarjeta__etiqueta {
   position: absolute;
   top: 0.6rem;
   right: 0.6rem;
   background: var(--cobre);
-  color: var(--plata-brillo);
-  font-size: 0.68rem;
+  color: var(--negro);
+  font-size: 0.7rem;
   font-weight: 800;
   padding: 0.22rem 0.65rem;
   border-radius: 999px;
@@ -606,10 +729,10 @@ em {
   gap: 0.35rem;
   margin-top: 0.6rem;
   background: var(--verde-whatsapp);
-  color: #fff;
+  color: var(--negro);
   font-weight: 700;
-  font-size: 0.82rem;
-  padding: 0.4rem 0.9rem;
+  font-size: 0.85rem;
+  padding: 0.45rem 0.95rem;
   border-radius: 999px;
   text-decoration: none;
   transition: filter 0.2s, transform 0.2s;
@@ -630,6 +753,36 @@ em {
   text-align: center;
   color: var(--acero);
   padding: 2rem 0;
+}
+
+/* Lista de servicios para quien no ejecuta JavaScript (<noscript>) */
+.noscript-lista {
+  margin-top: 2rem;
+  padding: 1.5rem;
+  background: var(--carbon);
+  border: 1px solid var(--acero-linea);
+  border-radius: 14px;
+  color: var(--plata);
+}
+
+.noscript-lista h3 {
+  margin: 0 0 0.5rem;
+  font-size: 1.15rem;
+  color: var(--plata-brillo);
+}
+
+.noscript-lista p {
+  margin: 0 0 1rem;
+}
+
+.noscript-lista ul {
+  margin: 0;
+  padding-left: 1.1rem;
+  line-height: 1.9;
+}
+
+.noscript-lista a {
+  color: var(--cobre);
 }
 
 /* ─────────── FAQ ─────────── */
@@ -683,6 +836,7 @@ em {
 }
 
 /* ─────────── GALERÍA ─────────── */
+/* Fotos de trabajos sin filtro de color: son la prueba real del acabado */
 .galeria {
   display: grid;
   grid-template-columns: repeat(auto-fill, minmax(280px, 1fr));
@@ -697,7 +851,6 @@ em {
   border-radius: var(--radio-tarjeta);
   border: 1px solid var(--acero-linea);
   display: block;
-  filter: grayscale(0.1) contrast(1.05);
 }
 
 .galeria__titulo {
@@ -748,7 +901,9 @@ em {
   border: 1px solid var(--acero-linea);
   background: var(--carbon);
   cursor: ew-resize;
-  touch-action: none;
+  /* pan-y: el arrastre horizontal mueve el comparador y el vertical sigue
+     haciendo scroll de la página (con "none" el celular quedaba trabado). */
+  touch-action: pan-y;
   user-select: none;
   -webkit-user-select: none;
 }
@@ -777,7 +932,6 @@ em {
   height: 100%;
   object-fit: cover;
   pointer-events: none;
-  filter: grayscale(0.1) contrast(1.05);
 }
 
 .comparador__img--antes {
@@ -1003,7 +1157,8 @@ em {
 .whatsapp-flotante .ico {
   width: 28px;
   height: 28px;
-  color: #fff;
+  color: var(--negro);
+  vertical-align: 0;
 }
 
 .whatsapp-flotante:hover {
@@ -1012,6 +1167,14 @@ em {
 
 /* ─────────── MOVILES ─────────── */
 @media (max-width: 720px) {
+  .header__inner {
+    gap: 0.6rem;
+  }
+
+  .header__logo-img {
+    height: 38px;
+  }
+
   .header__burger {
     display: flex;
   }
@@ -1047,9 +1210,22 @@ em {
     visibility: visible;
   }
 
-  .btn-whatsapp {
-    padding: 0.5rem 0.9rem;
-    font-size: 0.85rem;
+  /* En celular el botón del header es solo el ícono (el número ya está en el botón flotante) */
+  .header .btn-whatsapp {
+    width: 40px;
+    height: 40px;
+    padding: 0;
+    justify-content: center;
+  }
+
+  .header .btn-whatsapp .ico {
+    width: 22px;
+    height: 22px;
+    vertical-align: 0;
+  }
+
+  .btn-whatsapp__num {
+    display: none;
   }
 
   .btn-compartir-header {

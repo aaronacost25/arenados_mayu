@@ -3,13 +3,15 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Arenados Mayu | Arenado de piezas en Villa Icho Cruz y Mayu Sumaj</title>
+  <meta name="theme-color" content="#08090b">
+  <title>Arenados Mayu | Arenado en Villa Icho Cruz y Mayu Sumaj</title>
   <meta name="description" content="Servicio profesional de arenado (chorreado con arena) en Villa Icho Cruz, Mayu Sumaj y alrededores. Limpieza, desoxidado y preparación de piezas para pintura. Arenado a domicilio. Córdoba.">
 
-  <!-- Vista previa del link al compartirlo (WhatsApp, Instagram, etc.) -->
+  <!-- Vista previa del link al compartirlo (WhatsApp, Instagram, etc.)
+       📌 Verificá que img/og-preview.jpg exista con ESE nombre y extensión. -->
   <meta property="og:type" content="website">
   <meta property="og:title" content="Arenados Mayu | Servicio de arenado de piezas">
-  <meta property="og:description" content="Arenado de piezas y estructuras: limpieza, desoxidado y preparación para pintura. Mirá el catálogo y consultá precios por WhatsApp 📲">
+  <meta property="og:description" content="Arenado de piezas, estructuras y vehículos. ¿No podés traer la pieza? Arenamos a domicilio. Mirá el catálogo y consultá precios por WhatsApp 📲">
   <meta property="og:image" content="https://arenados-mayu.onrender.com/img/og-preview.jpg">
   <meta property="og:image:width" content="1200">
   <meta property="og:image:height" content="630">
@@ -21,10 +23,8 @@
   <!-- ══════════════════════════════════════════════════════════
        DATOS ESTRUCTURADOS (schema.org / JSON-LD)
        Le dice a Google qué es el negocio, dónde está y qué hace.
-       Es lo que hace que Google pueda mostrarlo con dirección y
-       teléfono en los resultados de búsqueda.
        📌 Si cambiás un servicio del catálogo, actualizá la lista de
-          abajo para que Google no Sampling los nombres viejos.
+          abajo para que Google no siga mostrando los nombres viejos.
        📌 Los horarios van aparte: se cargan en Google Business,
           no en el código de la web.
   ═══════════════════════════════════════════════════════════ -->
@@ -61,7 +61,16 @@
         { "@type": "Offer", "itemOffered": { "@type": "Service", "name": "Arenado de estructuras y herrería" } },
         { "@type": "Offer", "itemOffered": { "@type": "Service", "name": "Arenado de chasis y carrocería" } },
         { "@type": "Offer", "itemOffered": { "@type": "Service", "name": "Arenado de llantas y aros" } },
-        { "@type": "Offer", "itemOffered": { "@type": "Service", "name": "Arenado de piezas de moto y bicicleta" } }
+        { "@type": "Offer", "itemOffered": { "@type": "Service", "name": "Arenado de piezas de moto y bicicleta" } },
+        {
+          "@type": "Offer",
+          "itemOffered": {
+            "@type": "Service",
+            "name": "Arenado a domicilio",
+            "description": "Arenado en el lugar del cliente, para rejas, portones y estructuras grandes que no se pueden mover. También se puede dejar la pieza en el taller de Villa Icho Cruz, Mayu Sumaj.",
+            "areaServed": { "@type": "AdministrativeArea", "name": "Villa Icho Cruz y alrededores, Córdoba" }
+          }
+        }
       ]
     }
   }
@@ -76,6 +85,16 @@
   <link rel="icon" type="image/png" href="img/logo-mayu.png">
 </head>
 <body>
+
+  <!-- ÍCONOS (SVG reutilizables). Se usan con: <svg class="ico ico--wa"><use href="#i-wa"/></svg> -->
+  <svg width="0" height="0" style="position:absolute" aria-hidden="true" focusable="false">
+    <symbol id="i-wa" viewBox="0 0 24 24"><path d="M17.5 14.4c-.3-.15-1.76-.87-2.03-.97-.27-.1-.47-.15-.67.15-.2.3-.77.97-.94 1.17-.17.2-.35.22-.65.07-.3-.15-1.26-.46-2.4-1.48-.89-.79-1.49-1.77-1.66-2.07-.17-.3-.02-.46.13-.61.13-.13.3-.35.45-.52.15-.17.2-.3.3-.5.1-.2.05-.37-.02-.52-.08-.15-.67-1.62-.92-2.22-.24-.58-.49-.5-.67-.51h-.57c-.2 0-.52.07-.8.37-.27.3-1.04 1.02-1.04 2.49s1.07 2.89 1.22 3.09c.15.2 2.1 3.2 5.08 4.49.71.31 1.26.49 1.7.63.71.23 1.36.2 1.87.12.57-.09 1.76-.72 2-1.42.25-.7.25-1.3.18-1.42-.08-.12-.28-.2-.57-.35zM12 2a10 10 0 0 0-8.6 15.06L2 22l5.08-1.33A10 10 0 1 0 12 2zm0 18.3c-1.55 0-3.06-.42-4.38-1.22l-.31-.18-3.02.8.8-2.94-.2-.31a8.33 8.33 0 1 1 7.11 3.85z"/></symbol>
+    <symbol id="i-share" viewBox="0 0 24 24"><path d="M12 3v13"/><path d="m7 8 5-5 5 5"/><path d="M5 13v6a2 2 0 0 0 2 2h10a2 2 0 0 0 2-2v-6"/></symbol>
+    <symbol id="i-pin" viewBox="0 0 24 24"><path d="M20 10c0 6-8 12-8 12s-8-6-8-12a8 8 0 0 1 16 0Z"/><circle cx="12" cy="10" r="3"/></symbol>
+    <symbol id="i-capas" viewBox="0 0 24 24"><path d="m12 2 10 5-10 5L2 7z"/><path d="m2 12 10 5 10-5"/><path d="m2 17 10 5 10-5"/></symbol>
+    <symbol id="i-camion" viewBox="0 0 24 24"><path d="M14 18V6a2 2 0 0 0-2-2H4a2 2 0 0 0-2 2v11a1 1 0 0 0 1 1h2"/><path d="M15 18H9"/><path d="M19 18h2a1 1 0 0 0 1-1v-3.65a1 1 0 0 0-.22-.624l-3.48-4.35A1 1 0 0 0 17.52 8H14"/><circle cx="17" cy="18" r="2"/><circle cx="7" cy="18" r="2"/></symbol>
+    <symbol id="i-brillo" viewBox="0 0 24 24"><path d="M10 3l1.9 5.1L17 10l-5.1 1.9L10 17l-1.9-5.1L3 10l5.1-1.9z"/><path d="M19 15l.7 1.8 1.8.7-1.8.7L19 20l-.7-1.8-1.8-.7 1.8-.7z"/></symbol>
+  </svg>
 
   <!-- NOMBRE DEL NEGOCIO: editalo aqui abajo -->
   <div class="brand" data-nombre="Arenados Mayu"></div>
@@ -96,14 +115,14 @@
 
       <!-- Botón Compartir (visible en todas las páginas) -->
       <button class="btn-compartir-header js-compartir" type="button" aria-label="Compartir catálogo">
-        <svg class="ico" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M12 3v13"/><path d="m7 8 5-5 5 5"/><path d="M5 13v6a2 2 0 0 0 2 2h10a2 2 0 0 0 2-2v-6"/></svg>
+        <svg class="ico ico--linea" aria-hidden="true"><use href="#i-share"/></svg>
         <span class="btn-compartir-header__texto">Compartir</span>
       </button>
 
-      <!-- Numero de WhatsApp: 3541 38-9870 -->
-      <a class="btn-whatsapp" href="https://wa.me/543541389870?text=Hola!%20Quisiera%20consultar%20por%20el%20arenado%20de%20una%20pieza%20en%20Villa%20Icho%20Cruz%2C%20Mayu%20Sumaj." target="_blank" rel="noopener">
-        <svg class="ico" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M17.5 14.4c-.3-.15-1.76-.87-2.03-.97-.27-.1-.47-.15-.67.15-.2.3-.77.97-.94 1.17-.17.2-.35.22-.65.07-.3-.15-1.26-.46-2.4-1.48-.89-.79-1.49-1.77-1.66-2.07-.17-.3-.02-.46.13-.61.13-.13.3-.35.45-.52.15-.17.2-.3.3-.5.1-.2.05-.37-.02-.52-.08-.15-.67-1.62-.92-2.22-.24-.58-.49-.5-.67-.51h-.57c-.2 0-.52.07-.8.37-.27.3-1.04 1.02-1.04 2.49s1.07 2.89 1.22 3.09c.15.2 2.1 3.2 5.08 4.49.71.31 1.26.49 1.7.63.71.23 1.36.2 1.87.12.57-.09 1.76-.72 2-1.42.25-.7.25-1.3.18-1.42-.08-.12-.28-.2-.57-.35zM12 2a10 10 0 0 0-8.6 15.06L2 22l5.08-1.33A10 10 0 1 0 12 2zm0 18.3c-1.55 0-3.06-.42-4.38-1.22l-.31-.18-3.02.8.8-2.94-.2-.31a8.33 8.33 0 1 1 7.11 3.85z"/></svg>
-        3541 38-9870
+      <!-- Numero de WhatsApp: 3541 38-9870 (en celular se muestra solo el ícono) -->
+      <a class="btn-whatsapp" aria-label="Escribir por WhatsApp al 3541 38-9870" href="https://wa.me/543541389870?text=Hola!%20Quisiera%20consultar%20por%20el%20arenado%20de%20una%20pieza%20en%20Villa%20Icho%20Cruz%2C%20Mayu%20Sumaj." target="_blank" rel="noopener">
+        <svg class="ico ico--wa" aria-hidden="true"><use href="#i-wa"/></svg>
+        <span class="btn-whatsapp__num">3541 38-9870</span>
       </a>
 
       <button class="header__burger" id="btn-menu" aria-label="Abrir menú" aria-expanded="false" aria-controls="menu-movil">
@@ -116,16 +135,16 @@
   <section class="hero" id="portada">
     <div class="hero__inner">
       <div class="hero__info">
-        <span class="hero__badge">📍 Taller en Villa Icho Cruz, Mayu Sumaj</span>
+        <span class="hero__badge"><svg class="ico ico--linea" aria-hidden="true"><use href="#i-pin"/></svg> Taller en Villa Icho Cruz, zona Mayu Sumaj</span>
         <h1 class="hero__titulo">Arenado que prepara, no solo <em>limpia</em></h1>
-        <p class="hero__sub">Desoxidamos y dejamos la rugosidad exacta para que la pintura, el epoxi o el barniz agarren bien. Traé tu pieza al taller de Mayu Sumaj o hacemos arenado a domicilio en las localidades cercanas.</p>
+        <p class="hero__sub">Desoxidamos y dejamos la rugosidad exacta para que la pintura, el epoxi o el barniz agarren bien. Traé tu pieza al taller o hacemos arenado a domicilio en las localidades cercanas.</p>
         <div class="hero__acciones">
           <a class="btn-whatsapp" href="https://wa.me/543541389870?text=Hola!%20Quisiera%20consultar%20por%20el%20arenado%20de%20una%20pieza%20en%20Villa%20Icho%20Cruz%2C%20Mayu%20Sumaj." target="_blank" rel="noopener">
-            <svg class="ico" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M17.5 14.4c-.3-.15-1.76-.87-2.03-.97-.27-.1-.47-.15-.67.15-.2.3-.77.97-.94 1.17-.17.2-.35.22-.65.07-.3-.15-1.26-.46-2.4-1.48-.89-.79-1.49-1.77-1.66-2.07-.17-.3-.02-.46.13-.61.13-.13.3-.35.45-.52.15-.17.2-.3.3-.5.1-.2.05-.37-.02-.52-.08-.15-.67-1.62-.92-2.22-.24-.58-.49-.5-.67-.51h-.57c-.2 0-.52.07-.8.37-.27.3-1.04 1.02-1.04 2.49s1.07 2.89 1.22 3.09c.15.2 2.1 3.2 5.08 4.49.71.31 1.26.49 1.7.63.71.23 1.36.2 1.87.12.57-.09 1.76-.72 2-1.42.25-.7.25-1.3.18-1.42-.08-.12-.28-.2-.57-.35zM12 2a10 10 0 0 0-8.6 15.06L2 22l5.08-1.33A10 10 0 1 0 12 2zm0 18.3c-1.55 0-3.06-.42-4.38-1.22l-.31-.18-3.02.8.8-2.94-.2-.31a8.33 8.33 0 1 1 7.11 3.85z"/></svg>
+            <svg class="ico ico--wa" aria-hidden="true"><use href="#i-wa"/></svg>
             Consultar por WhatsApp
           </a>
           <button class="btn-compartir js-compartir" type="button">
-            <svg class="ico" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M12 3v13"/><path d="m7 8 5-5 5 5"/><path d="M5 13v6a2 2 0 0 0 2 2h10a2 2 0 0 0 2-2v-6"/></svg>
+            <svg class="ico ico--linea" aria-hidden="true"><use href="#i-share"/></svg>
             Compartir catálogo
           </button>
         </div>
@@ -139,27 +158,47 @@
     </div>
   </section>
 
+  <!-- ═══════════ ARENADO A DOMICILIO (franja destacada) ═══════════ -->
+  <!-- Va apenas abajo del hero, que es donde el visitante decide si sigue
+       scrolleando o escribe. El dato que más gente busca y el que más
+       cuesta que noten si está escondido en el FAQ. -->
+  <aside class="domicilio" id="domicilio">
+    <div class="domicilio__inner">
+      <div class="domicilio__icono" aria-hidden="true">
+        <svg class="ico ico--linea"><use href="#i-camion"/></svg>
+      </div>
+      <div class="domicilio__texto">
+        <h2 class="domicilio__titulo">¿No podés traer la pieza? <em>Arenamos en tu casa</em></h2>
+        <p class="domicilio__desc">Si la reja, el portón o la estructura es muy grande o no se puede mover, coordinamos y vamos nosotros con el equipo. También podés traerla al taller.</p>
+      </div>
+      <a class="btn-whatsapp domicilio__cta" href="https://wa.me/543541389870?text=Hola!%20Tengo%20una%20pieza%20para%20arenar%20y%20querr%C3%ADa%20saber%20si%20pueden%20hacerlo%20a%20domicilio%20en%20mi%20zona." target="_blank" rel="noopener">
+        <svg class="ico ico--wa" aria-hidden="true"><use href="#i-wa"/></svg>
+        Consultar por domicilio
+      </a>
+    </div>
+  </aside>
+
   <!-- ═══════════ SERVICIOS ═══════════ -->
   <section class="seccion seccion--primera" id="servicios">
     <div class="container">
       <h2 class="titulo-seccion">Nuestros <em>servicios</em></h2>
-      <p class="subtitulo-seccion">Traé tu pieza al taller de Mayu Sumaj o coordinamos la visita. El precio depende del producto, te lo pasamos por WhatsApp.</p>
+      <p class="subtitulo-seccion">Traé tu pieza al taller o coordinamos la visita. El precio depende del producto, te lo pasamos por WhatsApp.</p>
 
       <div class="grid-servicios">
         <article class="servicio">
-          <div class="servicio__icono">🖌️</div>
+          <div class="servicio__icono"><svg class="ico ico--linea" aria-hidden="true"><use href="#i-capas"/></svg></div>
           <h3 class="servicio__titulo">Preparación para pintura</h3>
           <p class="servicio__texto">No solo limpiamos: dejamos la superficie con la rugosidad justa para que la pintura, el epoxi o el barniz adhieran perfecto.</p>
         </article>
 
         <article class="servicio">
-          <div class="servicio__icono">🚚</div>
+          <div class="servicio__icono"><svg class="ico ico--linea" aria-hidden="true"><use href="#i-camion"/></svg></div>
           <h3 class="servicio__titulo">Arenado a domicilio</h3>
           <p class="servicio__texto">¿Tenés una reja, un portón o una estructura grande que no podés mover? Vamos con el equipo al lugar. Consultanos por zona.</p>
         </article>
 
         <article class="servicio">
-          <div class="servicio__icono">🧼</div>
+          <div class="servicio__icono"><svg class="ico ico--linea" aria-hidden="true"><use href="#i-brillo"/></svg></div>
           <h3 class="servicio__titulo">Limpieza y desoxidado</h3>
           <p class="servicio__texto">Eliminamos óxido, pintura vieja y suciedad incrustada sin dañar la pieza. Recuperamos piezas que parecían perdidas.</p>
         </article>
@@ -170,12 +209,12 @@
   <!-- ═══════════ CATÁLOGO ═══════════ -->
   <section class="seccion seccion--clara" id="catalogo">
     <div class="container">
-      <h2 class="titulo-seccion">Qué <em>areamos</em></h2>
+      <h2 class="titulo-seccion">Qué <em>arenamos</em></h2>
       <p class="subtitulo-seccion">Elegí el tipo de trabajo y consultanos. Como cada pieza es distinta, el precio depende del producto que traigas: te pasamos el costo exacto por WhatsApp.</p>
 
       <div class="catalogo__compartir">
         <button class="btn-compartir js-compartir" type="button">
-          <svg class="ico" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M12 3v13"/><path d="m7 8 5-5 5 5"/><path d="M5 13v6a2 2 0 0 0 2 2h10a2 2 0 0 0 2-2v-6"/></svg>
+          <svg class="ico ico--linea" aria-hidden="true"><use href="#i-share"/></svg>
           Compartir catálogo
         </button>
       </div>
@@ -199,14 +238,14 @@
         CONTENIDO EN HTML PLANO (SEO)
         El catálogo de arriba se arma con JavaScript, y hay buscadores
         (y personas) que no lo ejecutan. Esta lista existe para que los
-        servicios estén en el HTML: los/leen los buscadores, y el
+        servicios estén en el HTML: los leen los buscadores, y el
         visitante sin JS los ve igual. Misma lista que js/productos.js.
       -->
       <noscript>
-        <div style="margin-top:2rem;padding:1.5rem;border:1px solid rgba(0,0,0,.12);border-radius:14px;">
-          <h3 style="margin:0 0 .5rem;font-size:1.15rem;">Arenamos en Villa Icho Cruz, Mayu Sumaj y alrededores</h3>
-          <p style="margin:0 0 1rem;">Consultá precio por WhatsApp al 3541 38-9870:</p>
-          <ul style="margin:0;padding-left:1.1rem;line-height:1.9;">
+        <div class="noscript-lista">
+          <h3>Arenamos en Villa Icho Cruz, Mayu Sumaj y alrededores</h3>
+          <p>Consultá precio por WhatsApp al 3541 38-9870:</p>
+          <ul>
             <li><a href="https://wa.me/543541389870?text=Hola%21%20Quer%C3%ADa%20consultar%20por%20el%20arenado%20de%20un%20mueble%20de%20madera.">Arenado de muebles de madera</a></li>
             <li><a href="https://wa.me/543541389870?text=Hola%21%20Quer%C3%ADa%20consultar%20por%20el%20arenado%20de%20una%20pieza%20industrial.">Arenado de piezas industriales y repuestos</a></li>
             <li><a href="https://wa.me/543541389870?text=Hola%21%20Quer%C3%ADa%20consultar%20por%20el%20arenado%20de%20un%20objeto%20de%20metal.">Arenado de artículos y objetos varios</a></li>
@@ -240,11 +279,12 @@
       <p class="subtitulo-seccion">Algunas piezas que ya pasaron por nuestro taller.</p>
 
       <!-- 💡 Para agregar más fotos: guardalas en /img y copiá una
-           linea <img> de las de abajo cambiando la ruta y el alt -->
+           linea <img> de las de abajo cambiando la ruta y el alt.
+           Conviene que el alt describa la pieza real (ej: "Llanta de auto arenada"). -->
       <div class="galeria" id="galeria-grid">
-        <img class="galeria__img" src="img/galeria-1.jpg" alt="Trabajo terminado: pieza desoxidada y lista para pintar">
-        <img class="galeria__img" src="img/galeria-2.jpg" alt="Trabajo terminado: pieza restaurada en el taller">
-        <img class="galeria__img" src="img/galeria-3.jpg" alt="Trabajo terminado: resultado final del arenado">
+        <img class="galeria__img" src="img/galeria-1.jpg" alt="Trabajo terminado: pieza desoxidada y lista para pintar" loading="lazy">
+        <img class="galeria__img" src="img/galeria-2.jpg" alt="Trabajo terminado: pieza restaurada en el taller" loading="lazy">
+        <img class="galeria__img" src="img/galeria-3.jpg" alt="Trabajo terminado: resultado final del arenado" loading="lazy">
       </div>
     </div>
   </section>
@@ -258,7 +298,7 @@
       <div class="faq" id="faq-lista">
         <details class="faq__item">
           <summary class="faq__pregunta">¿Qué es el arenado?</summary>
-          <p class="faq__respuesta">Es un proceso que lanza arena (o abrasivo) a alta presión sobre una superficie para limpiarla, desoxidarla y dejarla lista para pintar o restaurar. Elimina oxido, pintura vieja y suciedad incrustada.</p>
+          <p class="faq__respuesta">Es un proceso que lanza arena (o abrasivo) a alta presión sobre una superficie para limpiarla, desoxidarla y dejarla lista para pintar o restaurar. Elimina óxido, pintura vieja y suciedad incrustada.</p>
         </details>
 
         <details class="faq__item">
@@ -268,12 +308,12 @@
 
         <details class="faq__item">
           <summary class="faq__pregunta">¿Tengo que dejar la pieza o la esperan?</summary>
-          <p class="faq__respuesta">La dejás en el taller y, según el tamaño y el trabajo, la tenés lista el mismo día o al siguiente. Coordinamos la entrega por WhatsApp.</p>
+          <p class="faq__respuesta">Depende del tamaño. Las piezas chicas las dejás en el taller y, según el trabajo, la tenés lista el mismo día o al siguiente. Las estructuras grandes que no se pueden mover (rejas, portones, cubiertas) las arenamos <strong>a domicilio</strong>: vamos nosotros con el equipo. En los dos casos coordinamos por WhatsApp.</p>
         </details>
 
         <details class="faq__item">
           <summary class="faq__pregunta">¿En qué zonas hacen el arenado a domicilio?</summary>
-          <p class="faq__respuesta">Tenemos el taller en Villa Icho Cruz, en la comuna de Mayu Sumaj. Si la pieza es grande o está en tu casa, escribinos contándonos dónde es y coordinamos la visita con el equipo móvil: vamos a las localidades de los alrededores.</p>
+          <p class="faq__respuesta">El taller está en Villa Icho Cruz, zona Mayu Sumaj. Si la pieza es grande o está en tu casa, escribinos contándonos dónde es y coordinamos la visita con el equipo móvil: vamos a las localidades de los alrededores.</p>
         </details>
       </div>
     </div>
@@ -288,20 +328,21 @@
             <img class="footer__logo-img" src="img/logo-mayu.png" alt="Arenados Mayu">
             Arenados Mayu
           </div>
-          <p class="footer__desc">Servicio profesional de arenado y chorreado con arena. Taller en Villa Icho Cruz, Mayu Sumaj. Limpiamos, desoxidamos y preparamos tus piezas para que queden como nuevas.</p>
+          <p class="footer__desc">Servicio profesional de arenado y chorreado con arena. Taller en Villa Icho Cruz, zona Mayu Sumaj. Limpiamos, desoxidamos y preparamos tus piezas para que queden como nuevas.</p>
         </div>
 
         <div class="footer__col">
           <h4 class="footer__titulo">Contacto</h4>
           <a class="footer__link" href="https://wa.me/543541389870?text=Hola!%20Quisiera%20consultar%20por%20el%20arenado%20de%20una%20pieza%20en%20Villa%20Icho%20Cruz%2C%20Mayu%20Sumaj." target="_blank" rel="noopener">
-            <svg class="ico" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M17.5 14.4c-.3-.15-1.76-.87-2.03-.97-.27-.1-.47-.15-.67.15-.2.3-.77.97-.94 1.17-.17.2-.35.22-.65.07-.3-.15-1.26-.46-2.4-1.48-.89-.79-1.49-1.77-1.66-2.07-.17-.3-.02-.46.13-.61.13-.13.3-.35.45-.52.15-.17.2-.3.3-.5.1-.2.05-.37-.02-.52-.08-.15-.67-1.62-.92-2.22-.24-.58-.49-.5-.67-.51h-.57c-.2 0-.52.07-.8.37-.27.3-1.04 1.02-1.04 2.49s1.07 2.89 1.22 3.09c.15.2 2.1 3.2 5.08 4.49.71.31 1.26.49 1.7.63.71.23 1.36.2 1.87.12.57-.09 1.76-.72 2-1.42.25-.7.25-1.3.18-1.42-.08-.12-.28-.2-.57-.35zM12 2a10 10 0 0 0-8.6 15.06L2 22l5.08-1.33A10 10 0 1 0 12 2zm0 18.3c-1.55 0-3.06-.42-4.38-1.22l-.31-.18-3.02.8.8-2.94-.2-.31a8.33 8.33 0 1 1 7.11 3.85z"/></svg>
+            <svg class="ico ico--wa" aria-hidden="true"><use href="#i-wa"/></svg>
             3541 38-9870
           </a>
         </div>
 
         <div class="footer__col">
           <h4 class="footer__titulo">Zona de trabajo</h4>
-          <p class="footer__desc">Taller en Villa Icho Cruz, Mayu Sumaj (Córdoba). Arenado a domicilio en las localidades de los alrededores.</p>
+          <p class="footer__desc">Taller en Villa Icho Cruz, zona Mayu Sumaj (Córdoba). Arenado a domicilio en las localidades de los alrededores.</p>
+          <!-- 📌 Cuando tengas la ficha de Google Maps, agregá acá un link "Cómo llegar". -->
         </div>
       </div>
 
@@ -313,7 +354,7 @@
 
   <!-- Botón flotante de WhatsApp -->
   <a class="whatsapp-flotante" href="https://wa.me/543541389870?text=Hola!%20Quisiera%20consultar%20por%20el%20arenado%20de%20una%20pieza%20en%20Villa%20Icho%20Cruz%2C%20Mayu%20Sumaj." target="_blank" rel="noopener" aria-label="Escribinos por WhatsApp">
-    <svg class="ico" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M17.5 14.4c-.3-.15-1.76-.87-2.03-.97-.27-.1-.47-.15-.67.15-.2.3-.77.97-.94 1.17-.17.2-.35.22-.65.07-.3-.15-1.26-.46-2.4-1.48-.89-.79-1.49-1.77-1.66-2.07-.17-.3-.02-.46.13-.61.13-.13.3-.35.45-.52.15-.17.2-.3.3-.5.1-.2.05-.37-.02-.52-.08-.15-.67-1.62-.92-2.22-.24-.58-.49-.5-.67-.51h-.57c-.2 0-.52.07-.8.37-.27.3-1.04 1.02-1.04 2.49s1.07 2.89 1.22 3.09c.15.2 2.1 3.2 5.08 4.49.71.31 1.26.49 1.7.63.71.23 1.36.2 1.87.12.57-.09 1.76-.72 2-1.42.25-.7.25-1.3.18-1.42-.08-.12-.28-.2-.57-.35zM12 2a10 10 0 0 0-8.6 15.06L2 22l5.08-1.33A10 10 0 1 0 12 2zm0 18.3c-1.55 0-3.06-.42-4.38-1.22l-.31-.18-3.02.8.8-2.94-.2-.31a8.33 8.33 0 1 1 7.11 3.85z"/></svg>
+    <svg class="ico ico--wa" aria-hidden="true"><use href="#i-wa"/></svg>
   </a>
 
   <script src="js/productos.js"></script>

@@ -132,7 +132,7 @@ renderizar("todos");
 const botonesCompartir = document.querySelectorAll(".js-compartir");
 const URL_CATALOGO = "https://arenados-mayu.onrender.com/";
 const TEXTO_COMPARTIR =
-  "Mirá el catálogo de Arenados Mayu: arenado de piezas, estructuras y vehículos. Consultanos por WhatsApp 📲";
+  "Mirá el catálogo de Arenados Mayu: arenado de piezas, estructuras y vehículos. ¿No podés traer la pieza? También arenamos A DOMICILIO 🚚. Consultanos por WhatsApp 📲";
 
 function mostrarAviso(texto) {
   const aviso = document.createElement("div");
