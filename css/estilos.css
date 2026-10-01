@@ -233,14 +233,13 @@ em {
   display: inline-flex;
   align-items: center;
   gap: 0.5rem;
-  margin-top: 0.9rem;
-  padding: 0.55rem 1.1rem;
-  background: var(--carbon-claro);
+  padding: 0.5rem 1rem;
+  background: var(--carbon);
   border: 1px solid var(--acero-linea);
   border-radius: 999px;
-  color: var(--plata-brillo);
+  color: var(--acero);
   font-weight: 700;
-  font-size: 0.9rem;
+  font-size: 0.86rem;
   text-decoration: none;
   transition: border-color 0.2s, color 0.2s, transform 0.2s;
 }
@@ -254,15 +253,6 @@ em {
 .btn-maps .ico {
   width: 17px;
   height: 17px;
-}
-
-/* En el hero comparte fila con los botones de WhatsApp y compartir, asi que
-   se le saca el margen que en el pie lo separa de la direccion. */
-.btn-maps--hero {
-  margin-top: 0;
-  padding: 0.5rem 1rem;
-  font-size: 0.86rem;
-  color: var(--acero);
 }
 
 /* ─────────── BOTÓN COMPARTIR CATÁLOGO ─────────── */
