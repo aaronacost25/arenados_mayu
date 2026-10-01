@@ -226,35 +226,38 @@ em {
 }
 
 /* ─────────── BOTÓN COMPARTIR CATÁLOGO ─────────── */
+/* A la derecha y en versión chica a propósito: antes era una píldora
+   grande con sombra, más llamativa que los filtros, y como estaba
+   centrada justo arriba de ellos se leía como un filtro más. */
 .catalogo__compartir {
   display: flex;
-  justify-content: center;
-  margin: -1.6rem 0 2.4rem;
+  justify-content: flex-end;
+  margin-bottom: 1.1rem;
 }
 
 .btn-compartir {
   display: inline-flex;
   align-items: center;
-  gap: 0.55rem;
-  background: var(--carbon-claro);
+  gap: 0.5rem;
+  background: var(--carbon);
   border: 1px solid var(--acero-linea);
-  color: var(--plata-brillo);
-  font-weight: 800;
-  font-size: 1.05rem;
-  padding: 0.75rem 1.6rem;
+  color: var(--acero);
+  font-weight: 700;
+  font-size: 0.86rem;
+  padding: 0.5rem 1rem;
   border-radius: 999px;
   cursor: pointer;
-  box-shadow: var(--sombra);
-  transition: border-color 0.2s, transform 0.2s;
+  transition: border-color 0.2s, color 0.2s, transform 0.2s;
 }
 
 .btn-compartir .ico {
-  width: 20px;
-  height: 20px;
+  width: 17px;
+  height: 17px;
 }
 
 .btn-compartir:hover {
   border-color: var(--cobre);
+  color: var(--plata-brillo);
   transform: translateY(-1px);
 }
 
@@ -592,29 +595,48 @@ em {
 }
 
 /* ─────────── CATÁLOGO ─────────── */
+/* ─────────── FILTROS DEL CATÁLOGO ─────────── */
+/* En una barra con fondo, no como píldoras sueltas al viento. El fondo
+   es --carbon (más oscuro) sobre la sección --carbon-claro, así que la
+   barra se lee como un panel y las píldoras se leen como botones. */
 .filtros {
   display: flex;
-  justify-content: center;
-  gap: 0.6rem;
+  align-items: center;
+  gap: 0.5rem;
   flex-wrap: wrap;
-  margin-bottom: 2.4rem;
+  margin-bottom: 2.6rem;
+  padding: 0.55rem 0.7rem 0.55rem 1.05rem;
+  background: var(--carbon);
+  border: 1px solid var(--acero-linea);
+  border-radius: 14px;
+}
+
+.filtros__label {
+  flex: 0 0 auto;
+  margin-right: 0.35rem;
+  font-size: 0.76rem;
+  font-weight: 800;
+  letter-spacing: 0.1em;
+  text-transform: uppercase;
+  color: var(--acero);
 }
 
 .filtro {
-  background: var(--carbon);
+  background: transparent;
   color: var(--plata);
   border: 1px solid var(--acero-linea);
-  padding: 0.55rem 1.4rem;
+  padding: 0.5rem 1.15rem;
   border-radius: 999px;
   cursor: pointer;
   font-weight: 700;
   font-family: inherit;
-  font-size: 0.92rem;
+  font-size: 0.9rem;
   transition: background 0.2s, color 0.2s, border-color 0.2s;
 }
 
 .filtro:hover {
   border-color: var(--cobre);
+  color: var(--plata-brillo);
 }
 
 .filtro--activo,
@@ -1241,6 +1263,34 @@ em {
 
   .solo-movil {
     display: inline;
+  }
+
+  /* En celular la barra pasa a grilla 2x2: la etiqueta arriba y las
+     píldoras en dos filas de ancho igual. Con flex crecían y la última
+     se estiraba sola a todo el ancho, que era lo que quedó desprolijo. */
+  .filtros {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    padding: 0.8rem 0.7rem;
+    gap: 0.45rem;
+  }
+
+  .filtros__label {
+    grid-column: 1 / -1;
+    margin: 0 0 0.15rem 0.35rem;
+  }
+
+  .filtro {
+    width: 100%;
+    text-align: center;
+    padding: 0.5rem 0.6rem;
+    font-size: 0.86rem;
+    min-height: 44px; /* área táctil cómoda con el dedo */
+  }
+
+  .catalogo__compartir .btn-compartir {
+    min-height: 40px;
+    padding: 0.5rem 1.1rem;
   }
 
   .grid-servicios {
