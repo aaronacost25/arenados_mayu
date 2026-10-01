@@ -225,16 +225,50 @@ em {
   transform: translateY(-1px);
 }
 
+/* ─────────── BOTÓN "CÓMO LLEGAR" (Google Maps) ─────────── */
+/* Se usa la URL de búsqueda de Maps con la dirección completa en vez de un
+   Place ID fijo: si la forrajería cambia de dirección, alcanza con editar
+   el href y no hay que sacar ningún link de Google Business. */
+.btn-maps {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.5rem;
+  margin-top: 0.9rem;
+  padding: 0.55rem 1.1rem;
+  background: var(--carbon-claro);
+  border: 1px solid var(--acero-linea);
+  border-radius: 999px;
+  color: var(--plata-brillo);
+  font-weight: 700;
+  font-size: 0.9rem;
+  text-decoration: none;
+  transition: border-color 0.2s, color 0.2s, transform 0.2s;
+}
+
+.btn-maps:hover {
+  border-color: var(--cobre);
+  color: var(--cobre);
+  transform: translateY(-1px);
+}
+
+.btn-maps .ico {
+  width: 17px;
+  height: 17px;
+}
+
+/* En el hero comparte fila con los botones de WhatsApp y compartir, asi que
+   se le saca el margen que en el pie lo separa de la direccion. */
+.btn-maps--hero {
+  margin-top: 0;
+  padding: 0.5rem 1rem;
+  font-size: 0.86rem;
+  color: var(--acero);
+}
+
 /* ─────────── BOTÓN COMPARTIR CATÁLOGO ─────────── */
 /* A la derecha y en versión chica a propósito: antes era una píldora
    grande con sombra, más llamativa que los filtros, y como estaba
    centrada justo arriba de ellos se leía como un filtro más. */
-.catalogo__compartir {
-  display: flex;
-  justify-content: flex-end;
-  margin-bottom: 1.1rem;
-}
-
 .btn-compartir {
   display: inline-flex;
   align-items: center;
@@ -1288,9 +1322,10 @@ em {
     min-height: 44px; /* área táctil cómoda con el dedo */
   }
 
-  .catalogo__compartir .btn-compartir {
-    min-height: 40px;
-    padding: 0.5rem 1.1rem;
+  .btn-maps {
+    width: 100%;
+    justify-content: center;
+    min-height: 44px;
   }
 
   .grid-servicios {
