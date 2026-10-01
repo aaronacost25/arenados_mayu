@@ -5,7 +5,7 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <meta name="theme-color" content="#08090b">
   <title>Arenados Mayu | Arenado en Comechingones, Mayu Sumaj</title>
-  <meta name="description" content="Arenado y chorreado con arena en Comechingones, zona Mayu Sumaj, Córdoba. Recibimos y entregamos en Forrajeria El Lucero. Limpieza, desoxidado y preparación para pintura. Arenado a domicilio.">
+  <meta name="description" content="Arenado y chorreado con arena en Comechingones, Mayu Sumaj, Córdoba. Retiro y entrega en Forrajeria El Lucero. Desoxidado y preparado para pintar, a domicilio.">
 
   <!-- Vista previa del link al compartirlo (WhatsApp, Instagram, etc.)
        📌 Verificá que img/og-preview.jpg exista con ESE nombre y extensión. -->
@@ -233,11 +233,12 @@
         <button class="filtro" data-filtro="vehiculo">Vehículos</button>
       </nav>
 
-      <div class="catalogo" id="catalogo-grid">
-        <p class="catalogo__vacio" id="vacio" style="display:none;">
-          No se encontraron artículos para esta categoría.
-        </p>
-      </div>
+      <div class="catalogo" id="catalogo-grid"></div>
+      <!-- El mensaje de "sin resultados" va FUERA del grid: renderizar()
+           reemplaza el contenido del grid en cada filtro y lo borraria. -->
+      <p class="catalogo__vacio" id="vacio" style="display:none;">
+        No se encontraron artículos para esta categoría.
+      </p>
 
       <!-- 💡 Los datos del catálogo se editan en js/productos.js -->
 
