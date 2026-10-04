@@ -471,23 +471,22 @@ em {
 
 .hero__inner {
   width: min(92%, 1100px);
-  min-height: 600px;
   margin: 0 auto;
   padding: 4.6rem 0;
   display: grid;
-  grid-template-columns: minmax(0, 1.05fr) minmax(360px, 0.95fr);
-  /* Arriba el texto y la foto; abajo, la fila del mapa a lo ancho (pedido del
-     cliente: el mapa va abajo de la foto). En el celular se apila todo. */
+  /* El hero es solo texto y mapa (la foto de la portada se sacó a pedido del
+     cliente), así que va en una sola columna: el texto arriba, el mapa a lo
+     ancho abajo. */
+  grid-template-columns: minmax(0, 1fr);
   grid-template-areas:
-    "info img"
-    "mapa mapa";
-  align-items: center;
-  column-gap: 3.2rem;
-  row-gap: 2.6rem;
+    "info"
+    "mapa";
+  row-gap: 3rem;
 }
 
 .hero__info {
   grid-area: info;
+  text-align: center;
 }
 
 .hero__info > * {
@@ -501,24 +500,24 @@ em {
   align-items: center;
   background: var(--carbon);
   border: 1px solid var(--acero-linea);
-  padding: 0.35rem;
-  border-radius: 1.1rem;
-  margin-bottom: 1.2rem;
+  padding: 0.45rem;
+  border-radius: 1.4rem;
+  margin-bottom: 1.3rem;
   line-height: 0;
 }
 
 .hero__badge-logo {
   display: block;
-  width: 46px;
-  height: 46px;
-  border-radius: 0.8rem;
+  width: 64px;
+  height: 64px;
+  border-radius: 1rem;
   object-fit: cover;
 }
 
 @media (max-width: 480px) {
   .hero__badge-logo {
-    width: 40px;
-    height: 40px;
+    width: 52px;
+    height: 52px;
   }
 }
 
@@ -534,68 +533,27 @@ em {
 .hero__sub {
   color: var(--acero);
   max-width: 610px;
-  margin-top: 1.25rem;
+  margin: 1.25rem auto 0;
   font-size: 1.05rem;
 }
 
 .hero__acciones {
   display: flex;
   align-items: center;
+  justify-content: center;
   flex-wrap: wrap;
   gap: 0.8rem;
   margin-top: 1.8rem;
 }
 
-.hero__img {
-  grid-area: img;
-  position: relative;
-  isolation: isolate;
-  animation: aparecer 0.8s 0.2s ease both;
-}
-
-.hero__img::before {
-  content: "";
-  position: absolute;
-  inset: 8% -7% -7% 9%;
-  z-index: -1;
-  border: 1px solid var(--acero-linea);
-  border-radius: 26px;
-  transform: rotate(3deg);
-  background: var(--carbon);
-}
-
-.hero__img img {
-  display: block;
-  width: 100%;
-  /* Proporción 3:2: la foto gana altura frente al título. Si querés ver la imagen
-     completa sin recorte, volvé a 1.92 / 1 (proporción original 1400x731). */
-  aspect-ratio: 3 / 2;
-  height: auto;
-  object-fit: cover;
-  border: 7px solid var(--carbon);
-  border-radius: 24px;
-  box-shadow: var(--sombra);
-  filter: grayscale(0.15) contrast(1.05);
-}
-
 @media (max-width: 860px) {
   .hero__inner {
-    grid-template-columns: 1fr;
-    grid-template-areas:
-      "info"
-      "img"
-      "mapa";
     gap: 2.5rem;
     padding: 3.6rem 0;
   }
 
   .hero__titulo {
     letter-spacing: -1.2px;
-  }
-
-  .hero__img {
-    width: min(100%, 620px);
-    margin: 0 auto;
   }
 }
 
@@ -611,8 +569,7 @@ em {
 }
 
 @media (prefers-reduced-motion: reduce) {
-  .hero__info > *,
-  .hero__img {
+  .hero__info > * {
     animation: none;
   }
 }
