@@ -48,8 +48,9 @@
     "currenciesAccepted": "ARS",
     "address": {
       "@type": "PostalAddress",
+      "streetAddress": "Comechingones 112",
       "addressLocality": "Comechingones",
-      "postalCode": "X5153",
+      "postalCode": "X5153AAA",
       "addressRegion": "Córdoba",
       "addressCountry": "AR"
     },
@@ -167,26 +168,14 @@
         </div>
       </div>
 
-      <!-- En el celu la foto va entre el texto y el mapa (lo pedido): primero
-           el texto, después la foto del trabajo, y el mapa cierra. -->
+      <!-- En el celu la foto va entre el texto y los botones (lo pedido):
+           primero el texto, después la foto del trabajo. El mapa quedó en la
+           franja de domicilio, más abajo, para no competir con la foto. -->
       <div class="hero__img">
         <!-- 💡 Imagen principal de la portada. Para cambiarla: poné tu foto en /img
              y reemplazá el src de abajo (ideal una horizontal, 1400 px de ancho). -->
         <img src="img/imagen-principal.jpg" alt="Arenados Mayu: arenado y desoxidado de piezas metálicas" width="1400" height="731" fetchpriority="high">
       </div>
-
-      <!-- "Cómo llegar": la tarjeta con el mapa es el botón.
-           El mapa es una foto (img/mapa-preview.jpg) para que el celular
-           no cargue Google Maps: pesa 31 KB contra más de 1 MB del mapa vivo.
-           El href apunta al pin exacto de la ficha de Google Maps. -->
-      <a class="mapa-card" href="https://www.google.com/maps/place/Forrajeria+El+Lucero/@-31.4741584,-64.5416437,17z/data=!3m1!4b1!4m6!3m5!1s0x942d69f83739c2b3:0x5feb9062cabc19f0!8m2!3d-31.4741584!4d-64.5416437!16s%2Fg%2F11krbr2dnj" target="_blank" rel="noopener">
-        <img class="mapa-card__img" src="img/mapa-preview.jpg" alt="Mapa con la ubicación de Forrajeria El Lucero en Comechingones, X5153" width="1000" height="563">
-        <span class="mapa-card__boton">
-          <svg class="ico ico--linea" aria-hidden="true"><use href="#i-pin"/></svg>
-          Cómo llegar
-        </span>
-        <span class="mapa-card__pie">Forrajeria El Lucero &middot; Comechingones, X5153</span>
-      </a>
     </div>
   </section>
 
@@ -220,6 +209,19 @@
       <a class="btn-whatsapp domicilio__cta" href="https://wa.me/543541389870?text=Hola!%20Tengo%20una%20pieza%20para%20arenar%20y%20querr%C3%ADa%20saber%20si%20pueden%20hacerlo%20a%20domicilio%20en%20mi%20zona." target="_blank" rel="noopener">
         <svg class="ico ico--wa" aria-hidden="true"><use href="#i-wa"/></svg>
         Consultar por domicilio
+      </a>
+
+      <!-- "Cómo llegar": la tarjeta con el mapa es el botón.
+           El mapa es una foto (img/mapa-preview.jpg) para que el celular
+           no cargue Google Maps: pesa 31 KB contra más de 1 MB del mapa vivo.
+           El href apunta al pin exacto de la ficha de Google Maps. -->
+      <a class="mapa-card" href="https://www.google.com/maps/place/Forrajeria+El+Lucero/@-31.4741584,-64.5416437,17z/data=!3m1!4b1!4m6!3m5!1s0x942d69f83739c2b3:0x5feb9062cabc19f0!8m2!3d-31.4741584!4d-64.5416437!16s%2Fg%2F11krbr2dnj" target="_blank" rel="noopener">
+        <img class="mapa-card__img" src="img/mapa-preview.jpg" alt="Mapa con la ubicación de Arenados Mayu en Comechingones 112, X5153" width="1000" height="563">
+        <span class="mapa-card__boton">
+          <svg class="ico ico--linea" aria-hidden="true"><use href="#i-pin"/></svg>
+          Cómo llegar
+        </span>
+        <span class="mapa-card__pie">Arenados Mayu &middot; Comechingones 112</span>
       </a>
     </div>
   </aside>
@@ -343,7 +345,7 @@
 
         <details class="faq__item">
           <summary class="faq__pregunta">¿Dónde recibo y retiro la pieza?</summary>
-          <p class="faq__respuesta">Recibimos y entregamos en <strong>Forrajeria El Lucero</strong>, en Comechingones (X5153), zona Mayu Sumaj, Córdoba. Traés la pieza, la arenamos y te avisamos por WhatsApp cuándo podés pasar a buscarla. Todo se coordina por ese mismo chat.</p>
+          <p class="faq__respuesta">Recibimos y entregamos en <strong>Forrajeria El Lucero</strong>, en Comechingones 112 (X5153AAA), zona Mayu Sumaj, Córdoba. Traés la pieza, la arenamos y te avisamos por WhatsApp cuándo podés pasar a buscarla. Todo se coordina por ese mismo chat.</p>
         </details>
 
         <details class="faq__item">
@@ -382,7 +384,7 @@
           <h4 class="footer__titulo">Dónde estamos</h4>
           <p class="footer__desc">
             Recibimos y entregamos en <strong>Forrajeria El Lucero</strong>.<br>
-            Comechingones, X5153<br>
+            Comechingones 112, X5153AAA<br>
             Zona Mayu Sumaj, Córdoba
           </p>
           <p class="footer__desc" style="margin-top: 0.9rem;">También arenamos a domicilio en las localidades de los alrededores.</p>
