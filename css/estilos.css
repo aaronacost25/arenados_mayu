@@ -232,9 +232,9 @@ em {
    El mapa es una imagen y no el mapa vivo de Google a propósito: el iframe de
    Maps pesa más de 1 MB y el celular de los clientes abre la app al tocar. */
 .mapa-card {
+  grid-area: mapa;
   position: relative;
   display: block;
-  margin-top: 1.6rem;
   border: 1px solid var(--acero-linea);
   border-radius: var(--radio);
   overflow: hidden;
@@ -466,8 +466,19 @@ em {
   padding: 4.6rem 0;
   display: grid;
   grid-template-columns: minmax(0, 1.05fr) minmax(360px, 0.95fr);
+  /* En escritorio: texto y mapa en la columna izquierda, foto a la derecha
+     ocupando las dos filas. En celular el orden pasa a texto > foto > mapa
+     (ver el @media de abajo), porque la foto debajo del mapa se leia mal. */
+  grid-template-areas:
+    "info img"
+    "mapa img";
   align-items: center;
-  gap: 3.2rem;
+  column-gap: 3.2rem;
+  row-gap: 2rem;
+}
+
+.hero__info {
+  grid-area: info;
 }
 
 .hero__info > * {
@@ -527,6 +538,7 @@ em {
 }
 
 .hero__img {
+  grid-area: img;
   position: relative;
   isolation: isolate;
   animation: aparecer 0.8s 0.2s ease both;
@@ -560,6 +572,12 @@ em {
 @media (max-width: 860px) {
   .hero__inner {
     grid-template-columns: 1fr;
+    /* En el celular la foto va en el medio: texto arriba, foto, y el mapa
+       de último. Pedido del cliente (la foto debajo del mapa se leía mal). */
+    grid-template-areas:
+      "info"
+      "img"
+      "mapa";
     gap: 2.5rem;
     padding: 3.6rem 0;
   }
