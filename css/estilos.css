@@ -228,13 +228,12 @@ em {
 }
 
 /* ─────────── TARJETA "CÓMO LLEGAR" (Google Maps) ─────────── */
-/* Va en la franja de domicilio, al costado del texto. La tarjeta ES el botón:
-   mapa de fondo, etiqueta arriba y la dirección abajo.
+/* Va abajo de la foto, a lo ancho del hero. La tarjeta ES el botón: mapa de
+   fondo, etiqueta arriba y la dirección abajo.
    El mapa es una imagen y no el mapa vivo de Google a propósito: el iframe de
    Maps pesa más de 1 MB y el celular de los clientes abre la app al tocar. */
 .mapa-card {
-  flex: 0 0 340px;
-  width: 100%;
+  grid-area: mapa;
   position: relative;
   display: block;
   border: 1px solid var(--acero-linea);
@@ -253,7 +252,10 @@ em {
   display: block;
   width: 100%;
   height: auto;
-  aspect-ratio: 1000 / 563;
+  /* A lo ancho del hero la foto del mapa se recorta un poco por arriba y por
+     abajo (el pin queda en el medio, así que no se pierde). En el celular,
+     que es angosta, se ve la foto entera. */
+  aspect-ratio: 1000 / 400;
   object-fit: cover;
 }
 
@@ -449,10 +451,11 @@ em {
     flex: 1 1 100%;
     justify-content: center;
   }
+}
 
-  /* El mapa pasa a ocupar todo el ancho de la franja */
-  .mapa-card {
-    flex: 1 1 100%;
+@media (max-width: 860px) {
+  .mapa-card__img {
+    aspect-ratio: 1000 / 563;
   }
 }
 
@@ -473,8 +476,18 @@ em {
   padding: 4.6rem 0;
   display: grid;
   grid-template-columns: minmax(0, 1.05fr) minmax(360px, 0.95fr);
+  /* Arriba el texto y la foto; abajo, la fila del mapa a lo ancho (pedido del
+     cliente: el mapa va abajo de la foto). En el celular se apila todo. */
+  grid-template-areas:
+    "info img"
+    "mapa mapa";
   align-items: center;
-  gap: 3.2rem;
+  column-gap: 3.2rem;
+  row-gap: 2.6rem;
+}
+
+.hero__info {
+  grid-area: info;
 }
 
 .hero__info > * {
@@ -534,6 +547,7 @@ em {
 }
 
 .hero__img {
+  grid-area: img;
   position: relative;
   isolation: isolate;
   animation: aparecer 0.8s 0.2s ease both;
@@ -567,6 +581,10 @@ em {
 @media (max-width: 860px) {
   .hero__inner {
     grid-template-columns: 1fr;
+    grid-template-areas:
+      "info"
+      "img"
+      "mapa";
     gap: 2.5rem;
     padding: 3.6rem 0;
   }
