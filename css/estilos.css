@@ -500,24 +500,24 @@ em {
   align-items: center;
   background: var(--carbon);
   border: 1px solid var(--acero-linea);
-  padding: 0.45rem;
-  border-radius: 1.4rem;
-  margin-bottom: 1.3rem;
+  padding: 0.55rem;
+  border-radius: 1.7rem;
+  margin-bottom: 1.5rem;
   line-height: 0;
 }
 
 .hero__badge-logo {
   display: block;
-  width: 64px;
-  height: 64px;
-  border-radius: 1rem;
+  width: 80px;
+  height: 80px;
+  border-radius: 1.2rem;
   object-fit: cover;
 }
 
 @media (max-width: 480px) {
   .hero__badge-logo {
-    width: 52px;
-    height: 52px;
+    width: 64px;
+    height: 64px;
   }
 }
 
