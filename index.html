@@ -40,9 +40,9 @@
     "sameAs": [
       "https://www.instagram.com/arenados.mayu/",
       "https://wa.me/543541389870",
-      "https://www.google.com/maps/search/?api=1&query=Forrajeria+El+Lucero%2C+Comechingones%2C+X5153+Mayu+Sumaj%2C+C%C3%B3rdoba%2C+Argentina"
+      "https://www.google.com/maps/place/Forrajeria+El+Lucero/@-31.4741584,-64.5416437,17z/data=!3m1!4b1!4m6!3m5!1s0x942d69f83739c2b3:0x5feb9062cabc19f0!8m2!3d-31.4741584!4d-64.5416437!16s%2Fg%2F11krbr2dnj"
     ],
-    "hasMap": "https://www.google.com/maps/search/?api=1&query=Forrajeria+El+Lucero%2C+Comechingones%2C+X5153+Mayu+Sumaj%2C+C%C3%B3rdoba%2C+Argentina",
+    "hasMap": "https://www.google.com/maps/place/Forrajeria+El+Lucero/@-31.4741584,-64.5416437,17z/data=!3m1!4b1!4m6!3m5!1s0x942d69f83739c2b3:0x5feb9062cabc19f0!8m2!3d-31.4741584!4d-64.5416437!16s%2Fg%2F11krbr2dnj",
     "description": "Servicio profesional de arenado y chorreado con arena. Limpieza, desoxidado y preparación de piezas metálicas, estructuras y vehículos para pintura. Recibimos y entregamos en Forrajeria El Lucero, Comechingones (X5153), Mayu Sumaj. Arenado a domicilio en las localidades cercanas.",
     "priceRange": "$$",
     "currenciesAccepted": "ARS",
@@ -52,6 +52,11 @@
       "postalCode": "X5153",
       "addressRegion": "Córdoba",
       "addressCountry": "AR"
+    },
+    "geo": {
+      "@type": "GeoCoordinates",
+      "latitude": -31.4741584,
+      "longitude": -64.5416437
     },
     "areaServed": [
       { "@type": "City", "name": "Comechingones" },
@@ -144,7 +149,10 @@
   <section class="hero" id="portada">
     <div class="hero__inner">
       <div class="hero__info">
-        <span class="hero__badge"><svg class="ico ico--linea" aria-hidden="true"><use href="#i-pin"/></svg> Mayu Sumaj</span>
+        <!-- Arriba del título va el logo en foto, a pedido del cliente -->
+        <span class="hero__badge">
+          <img class="hero__badge-logo" src="img/logo-mayu.png" alt="Arenados Mayu" width="640" height="640">
+        </span>
         <h1 class="hero__titulo">Arenado que prepara, no solo <em>limpia</em></h1>
         <p class="hero__sub">Desoxidamos y dejamos la rugosidad exacta para que la pintura, el epoxi o el barniz agarren bien. Recibimos y entregamos en Forrajeria El Lucero, o hacemos arenado a domicilio en las localidades cercanas.</p>
         <div class="hero__acciones">
@@ -156,11 +164,20 @@
             <svg class="ico ico--linea" aria-hidden="true"><use href="#i-share"/></svg>
             Compartir catálogo
           </button>
-          <a class="btn-maps" href="https://www.google.com/maps/search/?api=1&amp;query=Forrajeria+El+Lucero%2C+Comechingones%2C+X5153+Mayu+Sumaj%2C+C%C3%B3rdoba%2C+Argentina" target="_blank" rel="noopener">
+        </div>
+
+        <!-- "Cómo llegar": la tarjeta con el mapa es el botón.
+             El mapa es una foto (img/mapa-preview.jpg) para que el celular
+             no cargue Google Maps: pesa 31 KB contra más de 1 MB del mapa vivo.
+             El href apunta al pin exacto de la ficha de Google Maps. -->
+        <a class="mapa-card" href="https://www.google.com/maps/place/Forrajeria+El+Lucero/@-31.4741584,-64.5416437,17z/data=!3m1!4b1!4m6!3m5!1s0x942d69f83739c2b3:0x5feb9062cabc19f0!8m2!3d-31.4741584!4d-64.5416437!16s%2Fg%2F11krbr2dnj" target="_blank" rel="noopener">
+          <img class="mapa-card__img" src="img/mapa-preview.jpg" alt="Mapa con la ubicación de Forrajeria El Lucero en Comechingones, X5153" width="1000" height="563">
+          <span class="mapa-card__boton">
             <svg class="ico ico--linea" aria-hidden="true"><use href="#i-pin"/></svg>
             Cómo llegar
-          </a>
-        </div>
+          </span>
+          <span class="mapa-card__pie">Forrajeria El Lucero &middot; Comechingones, X5153</span>
+        </a>
       </div>
 
       <div class="hero__img">
@@ -180,9 +197,9 @@
       <h2 class="titulo-seccion">Antes y <em>después</em></h2>
       <p class="subtitulo-seccion">Mirá cómo quedan las piezas después de pasarlas por nuestro arenado.</p>
 
-      <!-- 💡 Las fotos del "antes y después" se editan en js/antes-despues.js -->
+      <!-- 💡 Las fotos del "antes y después" se editan en js/antes-despues.js.
+           Cada trabajo aparece uno debajo del otro, con su propia barra. -->
       <div class="comparador" id="comparador"></div>
-      <div class="comparador__nav" id="comparador-nav" hidden></div>
     </div>
   </section>
 

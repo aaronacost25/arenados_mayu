@@ -227,34 +227,70 @@ em {
   transform: translateY(-1px);
 }
 
-/* ─────────── BOTÓN "CÓMO LLEGAR" (Google Maps) ─────────── */
-/* Se usa la URL de búsqueda de Maps con la dirección completa en vez de un
-   Place ID fijo: si la forrajería cambia de dirección, alcanza con editar
-   el href y no hay que sacar ningún link de Google Business. */
-.btn-maps {
+/* ─────────── TARJETA "CÓMO LLEGAR" (Google Maps) ─────────── */
+/* La tarjeta ES el botón: mapa de fondo, etiqueta arriba y la dirección abajo.
+   El mapa es una imagen y no el mapa vivo de Google a propósito: el iframe de
+   Maps pesa más de 1 MB y el celular de los clientes abre la app al tocar. */
+.mapa-card {
+  position: relative;
+  display: block;
+  margin-top: 1.6rem;
+  border: 1px solid var(--acero-linea);
+  border-radius: var(--radio);
+  overflow: hidden;
+  text-decoration: none;
+  transition: border-color 0.2s, transform 0.2s;
+}
+
+.mapa-card:hover {
+  border-color: var(--cobre);
+  transform: translateY(-2px);
+}
+
+.mapa-card__img {
+  display: block;
+  width: 100%;
+  height: auto;
+  aspect-ratio: 1000 / 563;
+  object-fit: cover;
+}
+
+.mapa-card__boton {
+  position: absolute;
+  top: 0.75rem;
+  left: 0.75rem;
   display: inline-flex;
   align-items: center;
-  gap: 0.5rem;
+  gap: 0.45rem;
   padding: 0.5rem 1rem;
-  background: var(--carbon);
-  border: 1px solid var(--acero-linea);
   border-radius: 999px;
-  color: var(--acero);
+  background: rgba(18, 20, 24, 0.9);
+  border: 1px solid var(--acero-linea);
+  color: var(--plata-brillo);
   font-weight: 700;
   font-size: 0.86rem;
-  text-decoration: none;
-  transition: border-color 0.2s, color 0.2s, transform 0.2s;
 }
 
-.btn-maps:hover {
-  border-color: var(--cobre);
-  color: var(--cobre);
-  transform: translateY(-1px);
-}
-
-.btn-maps .ico {
+.mapa-card__boton .ico {
   width: 17px;
   height: 17px;
+  color: var(--cobre);
+}
+
+.mapa-card__pie {
+  position: absolute;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  padding: 1.8rem 0.9rem 0.7rem;
+  background: linear-gradient(rgba(11, 13, 16, 0), rgba(11, 13, 16, 0.9));
+  color: var(--acero);
+  font-size: 0.78rem;
+  letter-spacing: 0.3px;
+}
+
+.mapa-card:hover .mapa-card__boton {
+  border-color: var(--cobre);
 }
 
 /* ─────────── BOTÓN COMPARTIR CATÁLOGO ─────────── */
@@ -438,27 +474,32 @@ em {
   animation: aparecer 0.7s ease both;
 }
 
+/* En vez de un texto, acá va la foto del logo (pedido del cliente).
+   Por eso la píldora quedó cuadrada: no hay texto que paddingear. */
 .hero__badge {
   display: inline-flex;
   align-items: center;
-  gap: 0.4rem;
   background: var(--carbon);
   border: 1px solid var(--acero-linea);
-  color: var(--plata-brillo);
-  font-size: 0.78rem;
-  font-weight: 700;
-  letter-spacing: 0.8px;
-  text-transform: uppercase;
-  padding: 0.45rem 1.15rem;
-  border-radius: 999px;
+  padding: 0.35rem;
+  border-radius: 1.1rem;
   margin-bottom: 1.2rem;
+  line-height: 0;
 }
 
-.hero__badge .ico {
-  width: 15px;
-  height: 15px;
-  color: var(--cobre);
-  vertical-align: 0;
+.hero__badge-logo {
+  display: block;
+  width: 46px;
+  height: 46px;
+  border-radius: 0.8rem;
+  object-fit: cover;
+}
+
+@media (max-width: 480px) {
+  .hero__badge-logo {
+    width: 40px;
+    height: 40px;
+  }
 }
 
 .hero__titulo {
@@ -905,6 +946,12 @@ em {
   initial-value: 50%;
 }
 
+/* Los trabajos van apilados: cada uno con su propia barra deslizante */
+.comparador {
+  display: grid;
+  gap: 3.4rem;
+}
+
 .comparador__figura {
   margin: 0;
 }
@@ -1029,67 +1076,6 @@ em {
 .comparador__leyenda strong {
   color: var(--plata-brillo);
   font-size: 1.05rem;
-}
-
-.comparador__nav {
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  gap: 1rem;
-  margin-top: 1.3rem;
-}
-
-.comparador__flecha {
-  width: 42px;
-  height: 42px;
-  border-radius: 50%;
-  background: var(--carbon);
-  border: 1px solid var(--acero-linea);
-  display: grid;
-  place-items: center;
-  cursor: pointer;
-  color: var(--plata-brillo);
-  transition: transform 0.2s, border-color 0.2s;
-}
-
-.comparador__flecha:hover {
-  transform: translateY(-2px);
-  border-color: var(--cobre);
-}
-
-.comparador__puntos {
-  display: flex;
-  gap: 0.5rem;
-}
-
-.comparador__punto {
-  /* El punto visible es chico, pero el boton tiene que ser grande:
-     en celular un area de 10px es imposible de tocar con el dedo. */
-  width: 40px;
-  height: 40px;
-  padding: 0;
-  border: none;
-  background: none;
-  cursor: pointer;
-  position: relative;
-}
-
-.comparador__punto::before {
-  content: "";
-  position: absolute;
-  top: 50%;
-  left: 50%;
-  width: 10px;
-  height: 10px;
-  margin: -5px 0 0 -5px;
-  border-radius: 50%;
-  background: var(--acero-linea);
-  transition: background 0.2s, transform 0.2s;
-}
-
-.comparador__punto--activo::before {
-  background: var(--cobre);
-  transform: scale(1.3);
 }
 
 /* ─────────── FOOTER ─────────── */
@@ -1293,18 +1279,16 @@ em {
     min-height: 44px; /* área táctil cómoda con el dedo */
   }
 
-  .btn-maps {
-    width: 100%;
-    justify-content: center;
-    min-height: 44px;
-  }
-
   .grid-servicios {
     grid-template-columns: 1fr;
   }
 
   .galeria {
     grid-template-columns: 1fr 1fr;
+  }
+
+  .comparador {
+    gap: 2.6rem;
   }
 
   .comparador__manija {

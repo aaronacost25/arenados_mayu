@@ -196,7 +196,6 @@ if (anio) anio.textContent = new Date().getFullYear();
 // ═══ Antes y después (comparador deslizante) ═══
 // Los datos se editan en js/antes-despues.js
 const contenedorComparador = document.getElementById("comparador");
-const navComparador = document.getElementById("comparador-nav");
 const trabajosCargados =
   typeof ANTES_DESPUES !== "undefined" ? ANTES_DESPUES : [];
 
@@ -231,16 +230,12 @@ trabajosConFotos().then((trabajos) => {
 
   if (!trabajos.length) {
     // Ningún trabajo tiene fotos todavía: ocultar el bloque completo
-    const bloque = contenedorComparador.closest(".antes-despues");
+    const bloque = contenedorComparador.closest("section");
     if (bloque) bloque.style.display = "none";
     return;
   }
 
-  let indiceTrabajo = 0;
-
   const ICONO_MANIJA = `<svg viewBox="0 0 24 24" width="22" height="22" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M9 6 4 12l5 6"/><path d="m15 6 5 6-5 6"/></svg>`;
-  const ICONO_PREV = `<svg viewBox="0 0 24 24" width="20" height="20" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M14 6 8 12l6 6"/></svg>`;
-  const ICONO_SIG = `<svg viewBox="0 0 24 24" width="20" height="20" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="m10 6 6 6-6 6"/></svg>`;
 
   function fijarPct(slider, manija, pct) {
     pct = Math.min(100, Math.max(0, pct));
@@ -295,10 +290,10 @@ trabajosConFotos().then((trabajos) => {
     });
   }
 
-  function trabajoHTML(trabajo) {
+  function trabajoHTML(trabajo, conDemo) {
     return `
       <figure class="comparador__figura">
-        <div class="comparador__slider comparador__slider--demo">
+        <div class="comparador__slider${conDemo ? " comparador__slider--demo" : ""}">
           <img class="comparador__img" src="${trabajo.despues}" alt="Después: ${trabajo.titulo}" draggable="false"${trabajo.posDespues ? ` style="object-position: 50% ${trabajo.posDespues}"` : ""}>
           <img class="comparador__img comparador__img--antes" src="${trabajo.antes}" alt="Antes: ${trabajo.titulo}" draggable="false"${trabajo.posAntes ? ` style="object-position: 50% ${trabajo.posAntes}"` : ""}>
           <span class="comparador__etiqueta comparador__etiqueta--antes">Antes</span>
@@ -317,55 +312,17 @@ trabajosConFotos().then((trabajos) => {
       </figure>`;
   }
 
-  function renderNav() {
-    if (!navComparador) return;
-
-    if (trabajos.length < 2) {
-      navComparador.hidden = true;
-      return;
-    }
-
-    navComparador.hidden = false;
-    navComparador.innerHTML = `
-      <button class="comparador__flecha" id="comp-prev" type="button" aria-label="Trabajo anterior">${ICONO_PREV}</button>
-      <div class="comparador__puntos">
-        ${trabajos
-          .map(
-            (_, indice) =>
-              `<button class="comparador__punto${indice === indiceTrabajo ? " comparador__punto--activo" : ""}" type="button" data-i="${indice}" aria-label="Ver trabajo ${indice + 1}"></button>`
-          )
-          .join("")}
-      </div>
-      <button class="comparador__flecha" id="comp-next" type="button" aria-label="Trabajo siguiente">${ICONO_SIG}</button>`;
-
-    navComparador
-      .querySelector("#comp-prev")
-      .addEventListener("click", () => {
-        indiceTrabajo = (indiceTrabajo - 1 + trabajos.length) % trabajos.length;
-        renderComparador();
-      });
-
-    navComparador
-      .querySelector("#comp-next")
-      .addEventListener("click", () => {
-        indiceTrabajo = (indiceTrabajo + 1) % trabajos.length;
-        renderComparador();
-      });
-
-    navComparador.querySelectorAll(".comparador__punto").forEach((punto) => {
-      punto.addEventListener("click", () => {
-        indiceTrabajo = Number(punto.dataset.i);
-        renderComparador();
-      });
-    });
-  }
-
+  // Todos los trabajos se muestran, uno debajo del otro y cada uno con su
+  // propia barra. El primero es el único que hace el barrido de inicio, así
+  // se ve cómo funciona sin que se muevan dos a la vez.
   function renderComparador() {
-    contenedorComparador.innerHTML = trabajoHTML(trabajos[indiceTrabajo]);
-    activarSlider(
-      contenedorComparador.querySelector(".comparador__slider")
-    );
-    renderNav();
+    contenedorComparador.innerHTML = trabajos
+      .map((trabajo, indice) => trabajoHTML(trabajo, indice === 0))
+      .join("");
+
+    contenedorComparador
+      .querySelectorAll(".comparador__slider")
+      .forEach(activarSlider);
   }
 
   renderComparador();
