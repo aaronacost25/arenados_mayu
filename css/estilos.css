@@ -104,32 +104,15 @@ em {
   margin: 0 auto;
   display: flex;
   align-items: center;
-  justify-content: space-between;
+  justify-content: flex-end;
   gap: 1rem;
   padding: 0.7rem 0;
-}
-
-.header__logo {
-  display: flex;
-  align-items: center;
-  gap: 0.6rem;
-  text-decoration: none;
-  color: var(--plata-brillo);
-  font-weight: 800;
-  font-size: 1.1rem;
-  min-width: 0;
-}
-
-.header__logo-img {
-  height: 42px;
-  width: auto;
-  max-width: 100%;
-  display: block;
 }
 
 .header__nav {
   display: flex;
   gap: 1.6rem;
+  margin-right: auto; /* el menú queda a la izquierda, los botones a la derecha */
 }
 
 .header__nav a {
@@ -508,16 +491,16 @@ em {
 
 .hero__badge-logo {
   display: block;
-  width: 80px;
-  height: 80px;
+  width: 120px;   /* antes 80px */
+  height: 120px;
   border-radius: 1.2rem;
   object-fit: cover;
 }
 
 @media (max-width: 480px) {
   .hero__badge-logo {
-    width: 64px;
-    height: 64px;
+    width: 96px;  /* antes 64px */
+    height: 96px;
   }
 }
 
@@ -1170,10 +1153,6 @@ em {
     gap: 0.6rem;
   }
 
-  .header__logo-img {
-    height: 42px;
-  }
-
   .header__burger {
     display: flex;
   }
@@ -1233,7 +1212,8 @@ em {
     padding: 0;
     justify-content: center;
   }
-.btn-compartir-header__texto {
+
+  .btn-compartir-header__texto {
     display: none;
   }
 
