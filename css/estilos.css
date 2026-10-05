@@ -1233,8 +1233,7 @@ em {
     padding: 0;
     justify-content: center;
   }
-
-  .btn-compartir-header__texto {
+.btn-compartir-header__texto {
     display: none;
   }
 
