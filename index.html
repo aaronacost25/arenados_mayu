@@ -199,6 +199,23 @@
         Consultar por domicilio
       </a>
     </div>
+
+    <!-- El mapa va abajo del botón de la franja, a pedido del cliente. La
+         tarjeta ES el botón de "Cómo llegar": la foto de fondo, la etiqueta
+         arriba y la dirección abajo. Es una foto (img/mapa-preview.jpg) y no
+         el mapa vivo de Google a propósito: el iframe de Maps pesa más de
+         1 MB y el celular de los clientes abre la app al tocar.
+         El href apunta al pin exacto de la ficha de Google Maps. -->
+    <div class="domicilio__mapa">
+      <a class="mapa-card" href="https://www.google.com/maps/place/Forrajeria+El+Lucero/@-31.4741584,-64.5416437,17z/data=!3m1!4b1!4m6!3m5!1s0x942d69f83739c2b3:0x5feb9062cabc19f0!8m2!3d-31.4741584!4d-64.5416437!16s%2Fg%2F11krbr2dnj" target="_blank" rel="noopener">
+        <img class="mapa-card__img" src="img/mapa-preview.jpg" alt="Mapa con la ubicación de Arenados Mayu en Comechingones 112, X5153" width="1000" height="563">
+        <span class="mapa-card__boton">
+          <svg class="ico ico--linea" aria-hidden="true"><use href="#i-pin"/></svg>
+          Cómo llegar
+        </span>
+        <span class="mapa-card__pie">Arenados Mayu &middot; Comechingones 112</span>
+      </a>
+    </div>
   </aside>
 
   <!-- ═══════════ SERVICIOS ═══════════ -->
@@ -328,26 +345,6 @@
           <p class="faq__respuesta">Además del punto de retiro, vamos a las localidades de los alrededores de Mayu Sumaj. Si la pieza es grande o no se puede mover, escribinos contándonos dónde es y coordinamos la visita con el equipo móvil.</p>
         </details>
       </div>
-    </div>
-  </section>
-
-  <!-- ═══════════ CÓMO LLEGAR ═══════════ -->
-  <!-- El mapa bajó del hero: arriba va la prueba visual (antes y después).
-       Es una foto (img/mapa-preview.jpg) para que el celular no cargue
-       Google Maps: pesa 31 KB contra más de 1 MB del mapa vivo.
-       El href apunta al pin exacto de la ficha de Google Maps. -->
-  <section class="seccion seccion--ubicacion" id="ubicacion">
-    <div class="container container--angosto">
-      <h2 class="titulo-seccion">Cómo <em>llegar</em></h2>
-      <p class="subtitulo-seccion">Recibimos y entregamos en Forrajeria El Lucero, Comechingones 112.</p>
-      <a class="mapa-card" href="https://www.google.com/maps/place/Forrajeria+El+Lucero/@-31.4741584,-64.5416437,17z/data=!3m1!4b1!4m6!3m5!1s0x942d69f83739c2b3:0x5feb9062cabc19f0!8m2!3d-31.4741584!4d-64.5416437!16s%2Fg%2F11krbr2dnj" target="_blank" rel="noopener">
-        <img class="mapa-card__img" src="img/mapa-preview.jpg" alt="Mapa con la ubicación de Arenados Mayu en Comechingones 112, X5153" width="1000" height="563">
-        <span class="mapa-card__boton">
-          <svg class="ico ico--linea" aria-hidden="true"><use href="#i-pin"/></svg>
-          Cómo llegar
-        </span>
-        <span class="mapa-card__pie">Arenados Mayu &middot; Comechingones 112</span>
-      </a>
     </div>
   </section>
 

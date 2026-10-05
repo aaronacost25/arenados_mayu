@@ -214,8 +214,8 @@ em {
 }
 
 /* ─────────── TARJETA "CÓMO LLEGAR" (Google Maps) ─────────── */
-/* Va abajo de la foto, a lo ancho del hero. La tarjeta ES el botón: mapa de
-   fondo, etiqueta arriba y la dirección abajo.
+/* Va en la franja "Arenamos en tu casa", abajo del botón de WhatsApp. La
+   tarjeta ES el botón: mapa de fondo, etiqueta arriba y la dirección abajo.
    El mapa es una imagen y no el mapa vivo de Google a propósito: el iframe de
    Maps pesa más de 1 MB y el celular de los clientes abre la app al tocar. */
 .mapa-card {
@@ -237,11 +237,18 @@ em {
   display: block;
   width: 100%;
   height: auto;
-  /* A lo ancho del hero la foto del mapa se recorta un poco por arriba y por
-     abajo (el pin queda en el medio, así que no se pierde). En el celular,
-     que es angosta, se ve la foto entera. */
-  aspect-ratio: 1000 / 400;
+  /* La foto se ve ENTERA, sin recortar: el aspecto es el de la imagen
+     (1000x563), así que el pin y la etiqueta quedan siempre completos. */
+  aspect-ratio: 1000 / 563;
   object-fit: cover;
+}
+
+/* En la compu el mapa se pasa un poco del ancho del texto (más grande en la
+   pantalla grande, como pidió el cliente) pero centrado y sin salirse. */
+@media (min-width: 861px) {
+  .domicilio__mapa {
+    max-width: 1244px;
+  }
 }
 
 .mapa-card__boton {
@@ -357,14 +364,6 @@ em {
   padding-top: 2.6rem;
 }
 
-.seccion--ubicacion {
-  background: var(--carbon-claro);
-}
-
-.seccion--ubicacion .subtitulo-seccion {
-  margin-bottom: 2rem;
-}
-
 /* ─────────── FRANJA "ARENADO A DOMICILIO" ─────────── */
 /* Banda fina entre el hero y los servicios. El leve cobre del fondo la
    marca como aviso, y no como una tarjeta más del catálogo. */
@@ -433,6 +432,15 @@ em {
   white-space: nowrap;
 }
 
+/* El mapa, abajo de la fila del botón. Wrapper aparte para poder darle su
+   propio ancho (un poco más que el texto en la compu) y centrado, sin tocar
+   el flex de arriba. */
+.domicilio__mapa {
+  max-width: 1180px;
+  margin: 0 auto;
+  padding: 0 1.5rem 1.8rem;
+}
+
 @media (max-width: 820px) {
   .domicilio__inner {
     flex-wrap: wrap;
@@ -448,11 +456,10 @@ em {
     flex: 1 1 100%;
     justify-content: center;
   }
-}
 
-@media (max-width: 860px) {
-  .mapa-card__img {
-    aspect-ratio: 1000 / 563;
+  .domicilio__mapa {
+    max-width: 1244px;
+    padding: 0 1.15rem 1.5rem;
   }
 }
 
@@ -471,8 +478,8 @@ em {
   margin: 0 auto;
   padding: 3rem 0 2.6rem;
   display: grid;
-  /* El hero es solo texto: el mapa bajó a la sección "Cómo llegar" para que
-     el antes y después se vea en el primer pantallazo. */
+  /* El hero es solo texto: el mapa bajó a la franja "Arenamos en tu casa"
+     para que el antes y después se vea en el primer pantallazo. */
   grid-template-columns: minmax(0, 1fr);
   grid-template-areas: "info";
 }
@@ -493,24 +500,24 @@ em {
   align-items: center;
   background: var(--carbon);
   border: 1px solid var(--acero-linea);
-  padding: 0.55rem;
-  border-radius: 1.7rem;
-  margin-bottom: 1.5rem;
+  padding: 0.7rem;
+  border-radius: 2rem;
+  margin-bottom: 1.6rem;
   line-height: 0;
 }
 
 .hero__badge-logo {
   display: block;
-  width: 120px;   /* antes 80px */
-  height: 120px;
-  border-radius: 1.2rem;
+  width: 136px;   /* antes 120px */
+  height: 136px;
+  border-radius: 1.35rem;
   object-fit: cover;
 }
 
 @media (max-width: 480px) {
   .hero__badge-logo {
-    width: 96px;  /* antes 64px */
-    height: 96px;
+    width: 108px;  /* antes 96px */
+    height: 108px;
   }
 }
 
@@ -1220,10 +1227,6 @@ em {
     height: 40px;
     padding: 0;
     justify-content: center;
-  }
-
-  .btn-compartir-header__texto {
-    display: none;
   }
 
   /* En celular la barra pasa a grilla 2x2: la etiqueta arriba y las
