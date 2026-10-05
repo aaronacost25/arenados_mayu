@@ -188,13 +188,16 @@ em {
 .btn-compartir-header {
   display: inline-flex;
   align-items: center;
-  gap: 0.45rem;
+  justify-content: center;
+  width: 40px;
+  height: 40px;
+  padding: 0;
+  gap: 0;
   background: var(--carbon-claro);
   border: 1px solid var(--acero-linea);
   color: var(--plata-brillo);
   font-weight: 700;
   font-size: 0.88rem;
-  padding: 0.5rem 1rem;
   border-radius: 999px;
   cursor: pointer;
   transition: border-color 0.2s, transform 0.2s;
@@ -216,7 +219,6 @@ em {
    El mapa es una imagen y no el mapa vivo de Google a propósito: el iframe de
    Maps pesa más de 1 MB y el celular de los clientes abre la app al tocar. */
 .mapa-card {
-  grid-area: mapa;
   position: relative;
   display: block;
   border: 1px solid var(--acero-linea);
@@ -351,6 +353,18 @@ em {
   background: linear-gradient(180deg, var(--carbon) 0%, var(--negro) 420px);
 }
 
+.seccion--antes-despues {
+  padding-top: 2.6rem;
+}
+
+.seccion--ubicacion {
+  background: var(--carbon-claro);
+}
+
+.seccion--ubicacion .subtitulo-seccion {
+  margin-bottom: 2rem;
+}
+
 /* ─────────── FRANJA "ARENADO A DOMICILIO" ─────────── */
 /* Banda fina entre el hero y los servicios. El leve cobre del fondo la
    marca como aviso, y no como una tarjeta más del catálogo. */
@@ -455,16 +469,12 @@ em {
 .hero__inner {
   width: min(92%, 1100px);
   margin: 0 auto;
-  padding: 4.6rem 0;
+  padding: 3rem 0 2.6rem;
   display: grid;
-  /* El hero es solo texto y mapa (la foto de la portada se sacó a pedido del
-     cliente), así que va en una sola columna: el texto arriba, el mapa a lo
-     ancho abajo. */
+  /* El hero es solo texto: el mapa bajó a la sección "Cómo llegar" para que
+     el antes y después se vea en el primer pantallazo. */
   grid-template-columns: minmax(0, 1fr);
-  grid-template-areas:
-    "info"
-    "mapa";
-  row-gap: 3rem;
+  grid-template-areas: "info";
 }
 
 .hero__info {
@@ -531,8 +541,7 @@ em {
 
 @media (max-width: 860px) {
   .hero__inner {
-    gap: 2.5rem;
-    padding: 3.6rem 0;
+    padding: 2.4rem 0 2rem;
   }
 
   .hero__titulo {
@@ -1268,4 +1277,4 @@ em {
   .seccion--primera {
     padding-top: 2.4rem;
   }
-}
+} 
